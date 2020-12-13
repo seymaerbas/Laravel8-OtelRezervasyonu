@@ -1,5 +1,5 @@
 @extends('layouts.home')
-@section('title','Laravel Otel Rezervasyon Sitesi')
+@section('title','Laravel Otel Rezervasyon Sitesi Github')
 
 @section('description')
     Türkiyenin en konforlu ve lüks oteli..

@@ -1,3 +1,5 @@
+<!-- main banner -->
+<div class="main-top" id="home">
 <!-- banner -->
 <div class="banner_w3lspvt">
     <div class="csslider infinity" id="slider1">
@@ -52,3 +54,5 @@
     </div>
 </div>
 <!-- //banner -->
+</div>
+<!-- //main banner -->

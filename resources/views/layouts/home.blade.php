@@ -2,16 +2,13 @@
 <html lang="zxx">
 
 <head>
+    <title>Villas Hotel Category Flat Bootstrap Responsive Website Template | Home :: W3layouts</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title')</title>
-
-
-    <!-- Meta tag Keywords -->
-    <meta name="description" content="@yield('description')">
-    <meta name="keywords" content="@yield('keywords')" />
-    <meta name="author" content="Şeyma">
+    <meta name="author" content="" />
+    <meta name="keywords" content="Villas Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script>
         addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
@@ -24,7 +21,7 @@
     <!-- //Meta tag Keywords -->
 
     <!-- Custom-Files -->
-    <link rel= rel="stylesheet" href="{{asset('assets')}}/css/bootstrap.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/css/bootstrap.css">
     <!-- Bootstrap-Core-CSS -->
     <link href="{{asset('assets')}}/css/css_slider.css" type="text/css" rel="stylesheet" media="all">
     <!-- banner slider -->
@@ -38,26 +35,20 @@
     <link href="//fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700&amp;subset=latin-ext" rel="stylesheet">
     <!-- //Web-Fonts -->
-    @yield('css')
-    @yield('topjs')
-    @yield('headerjs')
 </head>
+
 <body>
 
 
 @include('home._header')
-<!-- banner bottom -->
-<div class="banner-bottom py-5">
-    <div class="d-md-flex container py-xl-5 py-lg-5">
 
-        @include('home._category')
 
-    </div>
-</div>
+
+
 
 
 @section('content')
-    içerik alan
+
 
 
 

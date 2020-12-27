@@ -8,13 +8,16 @@
 @section('keywords','Açık büfe, aqua park, ....')
 
 @section('content')
+
     @include('home._slider')
+
+
     <!-- banner bottom -->
     <div class="banner-bottom py-5">
         <div class="d-md-flex container py-xl-3 py-lg-3">
             <div class="banner-left-bottom-w3ls">
                 <h6 class="text-wh let">Sed do eiusmod tempor</h6>
-                <h3 class="text-wh my-3">Welcome to our Hotel</h3>
+                <h3 class="text-wh my-3">Welcome to our Villas</h3>
                 <p>Enjoy Your Every Moments With Your Partner In Villas Paradise Resort.<br>Sed do eiusmod tempor incididunt ut
                     labore.</p>
             </div>
@@ -24,6 +27,7 @@
         </div>
     </div>
     <!-- //banner bottom -->
+
     <!-- about -->
     <section class="about py-5" id="about">
         <div class="container py-xl-5 py-lg-3">
@@ -58,7 +62,7 @@
                 <div class="col-lg-4 price-mobamus">
                     <div class="price-top">
                         <a href="single.html">
-                            <img src="images/price1.jpg" alt="" class="img-fluid" />
+                            <img src="{{asset('assets')}}/images/price1.jpg" alt="" class="img-fluid" />
                         </a>
                     </div>
                     <div class="price-w3ls-bottom p-4">
@@ -221,7 +225,7 @@
                 <div class="col-lg-4 posts-mobamus">
                     <div class="posts-top">
                         <a href="single.html">
-                            <img src="images/blog1.jpg" alt="" class="img-fluid" />
+                            <img src="{{asset('assets')}}/images/blog1.jpg" alt="" class="img-fluid" />
                         </a>
                         <h3>13
                             <span>Sep</span>
@@ -246,7 +250,7 @@
                 <div class="col-lg-4 posts-mobamus my-lg-0 my-4">
                     <div class="posts-top">
                         <a href="single.html">
-                            <img src="images/blog2.jpg" alt="" class="img-fluid" />
+                            <img src="{{asset('assets')}}/images/blog2.jpg" alt="" class="img-fluid" />
                         </a>
                         <h3>16
                             <span>Sep</span>
@@ -307,7 +311,7 @@
             <div class="row welcome-bottom text-center">
                 <div class="col-lg-3 col-sm-6 px-2">
                     <div class="welcome-grid bg-wh py-5 px-4">
-                        <img src="images/wh1.jpg" alt="" class="img-fluid">
+                        <img src="{{asset('assets')}}/images/wh1.jpg" alt="" class="img-fluid">
                         <h4 class="mt-4 mb-3 text-bl">Service 01</h4>
                         <p>Quis nostrum ullam corporis suscipit.</p>
                     </div>
@@ -321,14 +325,14 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 mt-lg-0 mt-5 px-2">
                     <div class="welcome-grid bg-wh py-5 px-4">
-                        <img src="images/wh3.jpg" alt="" class="img-fluid">
+                        <img src="{{asset('assets')}}/images/wh3.jpg" alt="" class="img-fluid">
                         <h4 class="mt-4 mb-3 text-bl">Service 03</h4>
                         <p>Quis nostrum ullam corporis suscipit.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 mt-lg-0 mt-5 px-2">
                     <div class="welcome-grid bg-wh py-5 px-4">
-                        <img src="images/wh4.jpg" alt="" class="img-fluid">
+                        <img src="{{asset('assets')}}/images/wh4.jpg" alt="" class="img-fluid">
                         <h4 class="mt-4 mb-3 text-bl">Service 04</h4>
                         <p>Quis nostrum ullam corporis suscipit.</p>
                     </div>
@@ -348,7 +352,7 @@
                 <div class="col-lg-4 col-md-6 team-gd-info">
                     <div class="team-gd">
                         <div class="team-img mb-4">
-                            <img src="images/te1.jpg" class="img-fluid" alt="user-image">
+                            <img src="{{asset('assets')}}/images/te1.jpg" class="img-fluid" alt="user-image">
                         </div>
                         <div class="team-info">
                             <h3>Jason Dono <span class="sub-tittle-team">New York</span> </h3>
@@ -420,8 +424,7 @@
         <div class="container py-xl-5 py-lg-3">
             <h3 class="tittle text-center text-bl font-weight-bold">Subscribe Newsletter</h3>
             <p class="sub-tittle text-center mt-2 mb-sm-5 mb-4 pb-xl-3">Sed do eiusmod tempor incididunt ut labore et dolore
-                magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
             <div class="newsletter">
                 <form action="#" method="post">
                     <div class="form-group mb-0 w-100">

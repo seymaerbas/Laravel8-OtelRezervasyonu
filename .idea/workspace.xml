@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="273f4194-f990-4127-b0e7-5b99eb46224c" name="Default Changelist" comment="">
+    <list default="true" id="273f4194-f990-4127-b0e7-5b99eb46224c" name="Default Changelist" comment="Login ve Logout işlemleri yapıldı.&#10;web.php, _sidebar.blade.php, login.blade.php düzenlendi.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +193,7 @@
       <workItem from="1609346215618" duration="4988000" />
       <workItem from="1609409217996" duration="1249000" />
       <workItem from="1609416781270" duration="5797000" />
-      <workItem from="1609504963053" duration="9927000" />
+      <workItem from="1609504963053" duration="17794000" />
     </task>
     <task id="LOCAL-00001" summary="Index Changed">
       <created>1607894118647</created>
@@ -226,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609368275221</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Login ve Logout işlemleri yapıldı.&#10;web.php, _sidebar.blade.php, login.blade.php düzenlendi.">
+      <created>1609532709407</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609532709407</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +241,8 @@
     <MESSAGE value="Index Changed&#10;Home Changed&#10;template Edited" />
     <MESSAGE value="Admin panel oluşturuldu" />
     <MESSAGE value="Route tanımlandı.&#10;Login,Logincheck Fonksiyonu oluşturuldu.&#10;login.blade.php sayfası oluşturuldu." />
-    <option name="LAST_COMMIT_MESSAGE" value="Route tanımlandı.&#10;Login,Logincheck Fonksiyonu oluşturuldu.&#10;login.blade.php sayfası oluşturuldu." />
+    <MESSAGE value="Login ve Logout işlemleri yapıldı.&#10;web.php, _sidebar.blade.php, login.blade.php düzenlendi." />
+    <option name="LAST_COMMIT_MESSAGE" value="Login ve Logout işlemleri yapıldı.&#10;web.php, _sidebar.blade.php, login.blade.php düzenlendi." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

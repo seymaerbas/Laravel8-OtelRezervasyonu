@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="273f4194-f990-4127-b0e7-5b99eb46224c" name="Default Changelist" comment="Login ve Logout işlemleri yapıldı.&#10;web.php, _sidebar.blade.php, login.blade.php düzenlendi.">
+    <list default="true" id="273f4194-f990-4127-b0e7-5b99eb46224c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +193,8 @@
       <workItem from="1609346215618" duration="4988000" />
       <workItem from="1609409217996" duration="1249000" />
       <workItem from="1609416781270" duration="5797000" />
-      <workItem from="1609504963053" duration="17794000" />
+      <workItem from="1609504963053" duration="18316000" />
+      <workItem from="1609778647894" duration="4305000" />
     </task>
     <task id="LOCAL-00001" summary="Index Changed">
       <created>1607894118647</created>
@@ -230,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609532709407</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="CategoryController.php oluşturuldu.">
+      <created>1609544383577</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609544383577</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,17 +250,7 @@
     <MESSAGE value="Admin panel oluşturuldu" />
     <MESSAGE value="Route tanımlandı.&#10;Login,Logincheck Fonksiyonu oluşturuldu.&#10;login.blade.php sayfası oluşturuldu." />
     <MESSAGE value="Login ve Logout işlemleri yapıldı.&#10;web.php, _sidebar.blade.php, login.blade.php düzenlendi." />
-    <option name="LAST_COMMIT_MESSAGE" value="Login ve Logout işlemleri yapıldı.&#10;web.php, _sidebar.blade.php, login.blade.php düzenlendi." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/admin/_content.blade.php</url>
-          <line>59</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="CategoryController.php oluşturuldu." />
+    <option name="LAST_COMMIT_MESSAGE" value="CategoryController.php oluşturuldu." />
   </component>
 </project>

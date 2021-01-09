@@ -1,52 +1,26 @@
-<footer class="twt-footer">
-    <a href="#"><i class="fa fa-camera"></i></a>
-    <a href="#"><i class="fa fa-map-marker"></i></a>
-    New Castle, UK
-    <span class="pull-right">
-                            32
-                        </span>
+
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - developed by
+              <b><a href="https://indrijunanda.gitlab.io/" target="_blank">indrijunanda</a></b>
+            </span>
+        </div>
+    </div>
 </footer>
-</section>
+<!-- Footer -->
+</div>
 </div>
 
+<!-- Scroll to top -->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
 
-
-
-
-</div> <!-- .content -->
-</div><!-- /#right-panel -->
-
-<!-- Right Panel -->
-
-<script src="{{asset('assets')}}/admin/vendors/jquery/dist/jquery.min.js"></script>
-<script src="{{asset('assets')}}/admin/vendors/popper.js/dist/umd/popper.min.js"></script>
-<script src="{{asset('assets')}}/admin/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="{{asset('assets')}}/admin/assets/js/main.js"></script>
-
-
-<script src="{{asset('assets')}}/admin/vendors/chart.js/dist/Chart.bundle.min.js"></script>
-<script src="{{asset('assets')}}/admin/assets/js/dashboard.js"></script>
-<script src="{{asset('assets')}}/admin/assets/js/widgets.js"></script>
-<script src="{{asset('assets')}}/admin/vendors/jqvmap/dist/jquery.vmap.min.js"></script>
-<script src="{{asset('assets')}}/admin/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-<script src="{{asset('assets')}}/admin/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-<script>
-    (function($) {
-        "use strict";
-
-        jQuery('#vmap').vectorMap({
-            map: 'world_en',
-            backgroundColor: null,
-            color: '#ffffff',
-            hoverOpacity: 0.7,
-            selectedColor: '#1de9b6',
-            enableZoom: true,
-            showTooltip: true,
-            values: sample_data,
-            scaleColors: ['#1de9b6', '#03a9f5'],
-            normalizeFunction: 'polynomial'
-        });
-    })(jQuery);
-</script>
-
-
+<script src="{{asset('assets')}}/admin/vendor/jquery/jquery.min.js"></script>
+<script src="{{asset('assets')}}/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('assets')}}/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="{{asset('assets')}}/admin/js/ruang-admin.min.js"></script>
+<script src="{{asset('assets')}}/admin/vendor/chart.js/Chart.min.js"></script>
+<script src="{{asset('assets')}}/admin/js/demo/chart-area-demo.js"></script>

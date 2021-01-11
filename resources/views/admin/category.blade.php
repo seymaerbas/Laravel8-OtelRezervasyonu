@@ -21,8 +21,7 @@
         <section class="content">
 
             <div class="card">
-
-                <h3 class="card-title">Category List</h3>
+                <a href="{{route('admin_category_add')}}" type="button" class="btn btn-danger mb-1" style="width: 200px">Add Category</a>
             </div>
             <!-- DataTable with Hover -->
             <div class="col-lg-12">
@@ -49,8 +48,9 @@
                                 <td>{{$rs->parent_id}}</td>
                                 <td>{{$rs->title}}</td>
                                 <td>{{$rs->status}}</td>
-                                <td>Edit</td>
-                                <td>Delete</td>
+                                <td><a href="{{route('admin_category_edit',['id' => $rs->id])}}">edit</a></td>
+                                <td><a href="{{route('admin_category_delete',['id' => $rs->id])}}" onclick="return confirm(''Delete! Are you sure? '')">delete</a></td>
+
                             </tr>
                             </tbody>
                             @endforeach
@@ -81,7 +81,7 @@
 @endsection
 @section('footer')
 
-    <script src="{{asset('assets')}}/admin/vendor/jquery/jquery.min.js"></script>
+
     <script src="{{asset('assets')}}/admin/vendor/jquery/jquery.min.js"></script>
     <script src="{{asset('assets')}}/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="{{asset('assets')}}/admin/vendor/jquery-easing/jquery.easing.min.js"></script>

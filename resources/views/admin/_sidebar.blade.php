@@ -26,6 +26,15 @@
 
     </li>
     <li class="nav-item">
+
+        <a href="{{route('admin_products')}}" class="nav-link">
+
+            <i class="far fa-fw fa-window-maximize"></i>
+            <span>Oteller</span>
+        </a>
+
+    </li>
+    <li class="nav-item">
         <a class="nav-link collapsed" href="#">
             <i class="fab fa-fw fa-wpforms"></i>
             <span>Rezervasyon</span>
@@ -36,7 +45,7 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
            aria-controls="collapseTable">
             <i class="fas fa-fw fa-table"></i>
-            <span>Oteller</span>
+            <span>Ayarlar</span>
         </a>
         <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">

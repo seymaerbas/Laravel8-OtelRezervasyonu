@@ -36,7 +36,7 @@
                         <div class="card mb-4">
 
                             <div class="card-body">
-                                <form role="form" action="{{route('admin_category_update',[id])}}" method="post">
+                                <form role="form" action="{{route('admin_category_update',['id'])}}" method="post">
                                     @csrf
                                     <div class="form-group">
                                         <label>Parent</label>

@@ -1,16 +1,16 @@
 @extends('layouts.admin')
-@section('title','Category List')
+@section('title','Otel Listeleri')
 
 
 @section('content')
 
     <div class="container-fluid" id="container-wrapper">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Categories</h1>
+            <h1 class="h3 mb-0 text-gray-800">Oteller</h1>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="./">Home</a></li>
-                <li class="breadcrumb-item">Pages</li>
-                <li class="breadcrumb-item active" aria-current="page">Category</li>
+                <li class="breadcrumb-item"><a href="./">Ana Sayfa</a></li>
+                <li class="breadcrumb-item">Sayfalar</li>
+                <li class="breadcrumb-item active" aria-current="page">Oteller</li>
             </ol>
         </div>
 
@@ -21,7 +21,7 @@
         <section class="content">
 
             <div class="card">
-                <a href="{{route('admin_category_add')}}" type="button" class="btn btn-danger mb-1" style="width: 200px">Add Category</a>
+                <a href="{{route('admin_category_add')}}" type="button" class="btn btn-danger mb-1" style="width: 200px">Otel Ekle</a>
             </div>
             <!-- DataTable with Hover -->
             <div class="col-lg-12">
@@ -34,6 +34,9 @@
                                 <th>Id</th>
                                 <th>Parent</th>
                                 <th>Title</th>
+                                <th>Star</th>
+                                <th>Price</th>
+                                <th>City</th>
                                 <th>Status</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
@@ -47,9 +50,12 @@
                                 <td>{{$rs->id}}</td>
                                 <td>{{$rs->parent_id}}</td>
                                 <td>{{$rs->title}}</td>
+                                <td>{{$rs->star}}</td>
+                                <td>{{$rs->price}}</td>
+                                <td>{{$rs->city}}</td>
                                 <td>{{$rs->status}}</td>
-                                <td><a href="{{route('admin_category_edit',['id' => $rs->id])}}">edit</a></td>
-                                <td><a href="{{route('admin_category_delete',['id' => $rs->id])}}" onclick="return confirm(''Delete! Are you sure? '')">delete</a></td>
+                                <td><a href="{{route('admin_product_edit',['id' => $rs->id])}}">edit</a></td>
+                                <td><a href="{{route('admin_product_delete',['id' => $rs->id])}}" onclick="return confirm(''Delete! Are you sure? '')">delete</a></td>
 
                             </tr>
                             </tbody>

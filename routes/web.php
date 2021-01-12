@@ -41,15 +41,15 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('category/delete/{id}',[\App\Http\Controllers\Admin\CategoryController::class, 'destroy'])->name('admin_category_delete');
     Route::get('category/show',[\App\Http\Controllers\Admin\CategoryController::class, 'show'])->name('admin_category_show');
 
-//Product
-Route::prefix('product')->group(function (){
-    Route::get('/',[\App\Http\Controllers\Admin\ProductController::class,'index'])->name('admin_product');
-    Route::get('create',[\App\Http\Controllers\Admin\ProductController::class,'create'])->name('admin_product_add');
-    Route::post('store',[\App\Http\Controllers\Admin\ProductController::class,'store'])->name('admin_product_store');
-    Route::get('edit/{id}',[\App\Http\Controllers\Admin\ProductController::class,'edit'])->name('admin_product_edit');
-    Route::post('update/{id}',[\App\Http\Controllers\Admin\ProductController::class,'update'])->name('admin_product_update');
-    Route::get('delete/{id}',[\App\Http\Controllers\Admin\ProductController::class,'delete'])->name('admin_product_delete');
-    Route::get('show',[\App\Http\Controllers\Admin\ProductController::class,'show'])->name('admin_product_show');
+//Hotel
+Route::prefix('hotel')->group(function (){
+    Route::get('/',[\App\Http\Controllers\Admin\HotelController::class,'index'])->name('admin_hotels');
+    Route::get('create',[\App\Http\Controllers\Admin\HotelController::class,'create'])->name('admin_hotel_add');
+    Route::post('store',[\App\Http\Controllers\Admin\HotelController::class,'store'])->name('admin_hotel_store');
+    Route::get('edit/{id}',[\App\Http\Controllers\Admin\HotelController::class,'edit'])->name('admin_hotel_edit');
+    Route::post('update/{id}',[\App\Http\Controllers\Admin\HotelController::class,'update'])->name('admin_hotel_update');
+    Route::get('delete/{id}',[\App\Http\Controllers\Admin\HotelController::class,'delete'])->name('admin_hotel_delete');
+    Route::get('show',[\App\Http\Controllers\Admin\HotelController::class,'show'])->name('admin_hotel_show');
 
 
     });

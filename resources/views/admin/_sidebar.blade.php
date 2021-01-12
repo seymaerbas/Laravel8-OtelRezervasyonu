@@ -24,10 +24,10 @@
             <span>Kategori</span>
         </a>
 
-    </li>
+        </li>
     <li class="nav-item">
 
-        <a href="{{route('admin_products')}}" class="nav-link">
+        <a href="{{route('admin_hotels')}}" class="nav-link">
 
             <i class="far fa-fw fa-window-maximize"></i>
             <span>Oteller</span>

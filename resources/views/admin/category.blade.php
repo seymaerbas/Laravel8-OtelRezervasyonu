@@ -49,7 +49,7 @@
                                 <td>{{$rs->title}}</td>
                                 <td>{{$rs->status}}</td>
                                 <td><a href="{{route('admin_category_edit',['id' => $rs->id])}}">edit</a></td>
-                                <td><a href="{{route('admin_category_delete',['id' => $rs->id])}}" onclick="return confirm(''Delete! Are you sure? '')">delete</a></td>
+                                <td><a href="{{route('admin_category_delete',['id' => $rs->id])}}" onclick="return confirm('Delete! Are you sure?' )">delete</a></td>
 
                             </tr>
                             </tbody>
@@ -71,11 +71,15 @@
                 Footer
             </div><!-- /footer-->
 
-
+    </div>
+                            </div>
+                    </div>
+                        </div>
+                       </div>
         </section><!-- /.content -->
 
 
-</div>
+    </div>
 
 
 @endsection

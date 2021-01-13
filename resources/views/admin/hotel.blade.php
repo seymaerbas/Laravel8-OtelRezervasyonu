@@ -46,7 +46,7 @@
 
 
                             <tbody>
-                            <tr>php artisan migrate
+                            <tr>
                                 <td>{{$rs->id}}</td>
                                 <td>{{$rs->category_id}}</td>
                                 <td>{{$rs->title}}</td>

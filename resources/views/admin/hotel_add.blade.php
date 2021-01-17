@@ -46,7 +46,7 @@
                         <div class="card mb-4">
 
                             <div class="card-body">
-                                <form role="form" action="{{route('admin_hotel_store')}}" method="post">
+                                <form role="form" action="{{route('admin_hotel_store')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
                                         <label>Parent</label>
@@ -99,7 +99,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Phone</label>
-                                        <input type="number" name="phone" value="05" class="form-control" >
+                                        <input type="text" name="phone" value="05" class="form-control" >
                                     </div>
 
                                     <div class="form-group">
@@ -112,10 +112,18 @@
                                         <input type="text" name="country" class="form-control" >
                                     </div>
                                     <div class="form-group">
+                                        <label>İmage</label>
+                                        <input type="file" name="image" class="form-control" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Slug</label>
+                                        <input type="text" name="slug" class="form-control" >
+                                    </div>
+                                    <div class="form-group">
                                         <label >Status</label>
                                     <select class="select2-single form-control" name="status" id="select2Single">
-                                        <option selected="selected">False</option>
-                                        <option>True</option>
+                                        <option selected="selected" value="False">False</option>
+                                        <option value="True">True</option>
 
                                     </select>
                             </div>

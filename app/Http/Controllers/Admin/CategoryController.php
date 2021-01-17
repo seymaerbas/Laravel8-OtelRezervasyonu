@@ -45,9 +45,7 @@ class CategoryController extends Controller
      */
     public function create(Request $request)
     {
-
-        echo $name=$request->input('title');
-DB::table('categories')->insert([
+    DB::table('categories')->insert([
    'parent_id'=> $request->input('parent_id'),
    'title'=> $request->input('title'),
    'keywords'=> $request->input('keywords'),

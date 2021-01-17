@@ -47,6 +47,7 @@ class HotelController extends Controller
         $data->title= $request->input('title');
         $data->keywords= $request->input('keywords');
         $data->description=$request->input('description');
+        $data->slug=$request->input('slug');
         $data->status=$request->input('status');
         $data->category_id=$request->input('category_id');
         $data->user_id=Auth::id();
@@ -57,6 +58,7 @@ class HotelController extends Controller
         $data->phone=$request->input('phone');
         $data->city=$request->input('city');
         $data->country=$request->input('country');
+        $data->image = Storage::putFile('images', $request->file('image'));
         $data->save();
         return redirect()->route('admin_hotels');
     }
@@ -100,13 +102,21 @@ class HotelController extends Controller
 
         $data->title= $request->input('title');
         $data->keywords= $request->input('keywords');
-        $data-> description=$request->input('description');
-        $data->category_id= $request->input('category_id');
-        $data->user_id= $request->input('user_id');
-        $data->price= $request->input('price');
-        $data->city= $request->input('city');
-        $data->country= $request->input('country');
+        $data->description=$request->input('description');
+        $data->slug=$request->input('slug');
         $data->status=$request->input('status');
+        $data->category_id=$request->input('category_id');
+        $data->user_id=Auth::id();
+        $data->detail=$request->input('detail');
+        $data->star=$request->input('star');
+        $data->price=$request->input('price');
+        $data->address=$request->input('address');
+        $data->phone=$request->input('phone');
+        $data->city=$request->input('city');
+        $data->country=$request->input('country');
+        if($data->image){
+             $data->image = Storage::putFile('images', $request->file('image'));
+        }
         $data->save();
         return redirect()->route('admin_hotels');
     }

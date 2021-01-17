@@ -35,6 +35,8 @@
                                 <th>Category</th>
                                 <th>Title</th>
                                 <th>Star</th>
+                                <th>image</th>
+                                <th>image Gallery</th>
                                 <th>Price</th>
                                 <th>City</th>
                                 <th>Status</th>
@@ -42,15 +44,18 @@
                                 <th>Delete</th>
                             </tr>
                             </thead>
-                            @foreach($datalist as $rs )
-
 
                             <tbody>
+                            @foreach($datalist as $rs )
                             <tr>
                                 <td>{{$rs->id}}</td>
                                 <td>{{$rs->category_id}}</td>
                                 <td>{{$rs->title}}</td>
                                 <td>{{$rs->star}}</td>
+                                <td>
+                                    <img src="{{ Storage::url($rs->image) }}" height="30" alt="">
+                                </td>
+                                <td><a href="{{route('admin_image_add',['hotel_id' => $rs->id])}}" ><img src="{{asset('assets/admin/img')}}/gallery.png" height="40"></a></td>
                                 <td>{{$rs->price}}</td>
                                 <td>{{$rs->city}}</td>
                                 <td>{{$rs->status}}</td>

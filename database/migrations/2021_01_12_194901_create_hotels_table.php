@@ -27,6 +27,7 @@ class CreateHotelsTable extends Migration
             $table->integer('phone')->default();
             $table->string('city',20);
             $table->string('country',20);
+            $table->string('slug')->nullable();
             $table->string('status',5)->nullable()->default('False');
             $table->string('image',75)->nullable();
             $table->timestamps();

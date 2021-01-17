@@ -2,12 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="273f4194-f990-4127-b0e7-5b99eb46224c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HotelController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Hotel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_12_194901_create_hotels_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_12_201727_hotel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_14_114119_create_images_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_14_150541_image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/image_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Laravel-Otel-Rezervasyon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel-Otel-Rezervasyon.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e340aee7-3d2f-4164-8a8e-66244a98ffc4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e340aee7-3d2f-4164-8a8e-66244a98ffc4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HotelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HotelController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_01_215204_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_01_215204_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_01_223904_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_01_223904_category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_12_194901_create_hotels_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_12_194901_create_hotels_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" afterDir="false" />
@@ -144,6 +156,9 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
     </include_path>
   </component>
   <component name="ProjectId" id="1lcQ3ayZDvQz6hSNBR1ZVx70pM5" />
@@ -155,6 +170,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite&#10;mariadb&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -217,7 +233,10 @@
       <workItem from="1610376730096" duration="9550000" />
       <workItem from="1610438503338" duration="15956000" />
       <workItem from="1610478490674" duration="13885000" />
-      <workItem from="1610558008650" duration="8402000" />
+      <workItem from="1610558008650" duration="8747000" />
+      <workItem from="1610607291998" duration="34006000" />
+      <workItem from="1610698966652" duration="2720000" />
+      <workItem from="1610913907571" duration="8951000" />
     </task>
     <task id="LOCAL-00001" summary="Index Changed">
       <created>1607894118647</created>
@@ -303,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610493169154</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Zengin metin editörü oluşturuldu.">
+      <created>1610579815837</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1610579815838</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +348,7 @@
     <MESSAGE value="Kategori için silme ve düzenleme işlemleri yapıldı.&#10;category_add.blade.php ve category_edit.blade.php dosyaları oluşturuldu." />
     <MESSAGE value="product.blade.php,ProductControler ve product tablosu oluşturuldu." />
     <MESSAGE value="product.blade.php,ProductControler ve product tablosu silindi hotel.blade.php,HotelController ve hotel tablosu oluşturulup ekleme ve düzenleme işlemleri yapıldı." />
-    <option name="LAST_COMMIT_MESSAGE" value="product.blade.php,ProductControler ve product tablosu silindi hotel.blade.php,HotelController ve hotel tablosu oluşturulup ekleme ve düzenleme işlemleri yapıldı." />
+    <MESSAGE value="Zengin metin editörü oluşturuldu." />
+    <option name="LAST_COMMIT_MESSAGE" value="Zengin metin editörü oluşturuldu." />
   </component>
 </project>

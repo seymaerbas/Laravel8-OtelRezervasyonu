@@ -48,8 +48,8 @@
                                 <td>{{$rs->parent_id}}</td>
                                 <td>{{$rs->title}}</td>
                                 <td>{{$rs->status}}</td>
-                                <td><a href="{{route('admin_category_edit',['id' => $rs->id])}}">edit</a></td>
-                                <td><a href="{{route('admin_category_delete',['id' => $rs->id])}}" onclick="return confirm('Delete! Are you sure?' )">delete</a></td>
+                                <td><a href="{{route('admin_category_edit',['id' => $rs->id])}}"><img src="{{asset('assets/admin/img')}}/edit.png" height="40"></a></td>
+                                <td><a href="{{route('admin_category_delete',['id' => $rs->id])}}" onclick="return confirm('Delete! Are you sure?' )"><img src="{{asset('assets/admin/img')}}/delete.png" height="40"></a></td>
 
                             </tr>
                             </tbody>

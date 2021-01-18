@@ -55,12 +55,12 @@
                                 <td>
                                     <img src="{{ Storage::url($rs->image) }}" height="30" alt="">
                                 </td>
-                                <td><a href="{{route('admin_image_add',['hotel_id' => $rs->id])}}" ><img src="{{asset('assets/admin/img')}}/gallery.png" height="40"></a></td>
+                                <td><a href="{{route('admin_image_add',['hotel_id' => $rs->id])}}" onclick="return !window.open(this.href, '','top=50 left=100 width=1100 height=700') "><img src="{{asset('assets/admin/img')}}/gallery.png" height="40"></a></td>
                                 <td>{{$rs->price}}</td>
                                 <td>{{$rs->city}}</td>
                                 <td>{{$rs->status}}</td>
-                                <td><a href="{{route('admin_hotel_edit',['id' => $rs->id])}}">Edit</a></td>
-                                <td><a href="{{route('admin_hotel_delete',['id' => $rs->id])}}" onclick="return confirm('Delete! Are you sure? ')">Delete</a></td>
+                                <td><a href="{{route('admin_hotel_edit',['id' => $rs->id])}}"><img src="{{asset('assets/admin/img')}}/edit.png" height="40"></a></td>
+                                <td><a href="{{route('admin_hotel_delete',['id' => $rs->id])}}" onclick="return confirm('Delete! Are you sure? ')"><img src="{{asset('assets/admin/img')}}/delete.png" height="40"></a></td>
 
                             </tr>
                             </tbody>

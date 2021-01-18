@@ -49,10 +49,10 @@ class ImageController extends Controller
 
         $data = new Image;
         $data->title = $request->input('title');
-        $data->hotel_id=$request->input('product_id');
+        $data->product_id=$hotel_id;
         $data->image = Storage::putFile('images', $request->file('image'));
         $data->save();
-        return redirect()->route('admin_image_add',['hotel_id'=>$hotel_id]);
+        return redirect()->back();
     }
 
     /**
@@ -95,8 +95,12 @@ class ImageController extends Controller
      * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Image $image)
+    public function destroy(Image $image,$id,$hotel_id)
     {
-        //
+        $data = Image::find($id);
+        $data->delete();
+
+        return redirect()->route('admin_image_add',['hotel_id'=>$hotel_id]);
+
     }
 }

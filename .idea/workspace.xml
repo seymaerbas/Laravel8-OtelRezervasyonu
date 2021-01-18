@@ -2,27 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="273f4194-f990-4127-b0e7-5b99eb46224c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_14_114119_create_images_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_14_150541_image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/image_add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Laravel-Otel-Rezervasyon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel-Otel-Rezervasyon.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e340aee7-3d2f-4164-8a8e-66244a98ffc4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e340aee7-3d2f-4164-8a8e-66244a98ffc4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HotelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HotelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_01_215204_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_01_215204_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_01_223904_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_01_223904_category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_12_194901_create_hotels_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_12_194901_create_hotels_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/image_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/image_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +221,8 @@
       <workItem from="1610558008650" duration="8747000" />
       <workItem from="1610607291998" duration="34006000" />
       <workItem from="1610698966652" duration="2720000" />
-      <workItem from="1610913907571" duration="8951000" />
+      <workItem from="1610913907571" duration="9245000" />
+      <workItem from="1610964507944" duration="20329000" />
     </task>
     <task id="LOCAL-00001" summary="Index Changed">
       <created>1607894118647</created>
@@ -329,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610579815838</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="image yükleme ve image gallery oluşturuldu. Hotel tables değiştirildi.">
+      <created>1610925657314</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610925657314</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,6 +342,7 @@
     <MESSAGE value="product.blade.php,ProductControler ve product tablosu oluşturuldu." />
     <MESSAGE value="product.blade.php,ProductControler ve product tablosu silindi hotel.blade.php,HotelController ve hotel tablosu oluşturulup ekleme ve düzenleme işlemleri yapıldı." />
     <MESSAGE value="Zengin metin editörü oluşturuldu." />
-    <option name="LAST_COMMIT_MESSAGE" value="Zengin metin editörü oluşturuldu." />
+    <MESSAGE value="image yükleme ve image gallery oluşturuldu. Hotel tables değiştirildi." />
+    <option name="LAST_COMMIT_MESSAGE" value="image yükleme ve image gallery oluşturuldu. Hotel tables değiştirildi." />
   </component>
 </project>

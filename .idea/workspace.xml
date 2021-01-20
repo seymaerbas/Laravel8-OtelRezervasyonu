@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="273f4194-f990-4127-b0e7-5b99eb46224c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/setting_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e340aee7-3d2f-4164-8a8e-66244a98ffc4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e340aee7-3d2f-4164-8a8e-66244a98ffc4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Hotel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Hotel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +220,7 @@
       <workItem from="1610698966652" duration="2720000" />
       <workItem from="1610913907571" duration="9245000" />
       <workItem from="1610964507944" duration="20460000" />
-      <workItem from="1611139897084" duration="17952000" />
+      <workItem from="1611139897084" duration="19971000" />
     </task>
     <task id="LOCAL-00001" summary="Index Changed">
       <created>1607894118647</created>
@@ -330,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611004713031</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Setting site ayarları yapıldı.&#10;dosyalar,tablolar oluşturulup veritabanına uygulandı.&#10;setting_edit.blade.php oluşturuldu.">
+      <created>1611164822443</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1611164822443</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,6 +356,7 @@
     <MESSAGE value="Zengin metin editörü oluşturuldu." />
     <MESSAGE value="image yükleme ve image gallery oluşturuldu. Hotel tables değiştirildi." />
     <MESSAGE value="Hatalar giderildi.İmage gallerinin ayrı pencerede açılması sağlandı." />
-    <option name="LAST_COMMIT_MESSAGE" value="Hatalar giderildi.İmage gallerinin ayrı pencerede açılması sağlandı." />
+    <MESSAGE value="Setting site ayarları yapıldı.&#10;dosyalar,tablolar oluşturulup veritabanına uygulandı.&#10;setting_edit.blade.php oluşturuldu." />
+    <option name="LAST_COMMIT_MESSAGE" value="Setting site ayarları yapıldı.&#10;dosyalar,tablolar oluşturulup veritabanına uygulandı.&#10;setting_edit.blade.php oluşturuldu." />
   </component>
 </project>

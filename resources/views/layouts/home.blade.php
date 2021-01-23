@@ -2,13 +2,15 @@
 <html lang="zxx">
 
 <head>
-    <title>Villas Hotel Category Flat Bootstrap Responsive Website Template | Home :: W3layouts</title>
+
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
+    <title> @yield('title')</title>
+    <meta name="description" content="@yield('description')">
+    <meta name="keywords" content="@yield('keywords')">
+    <meta name="author" content="Şeyma Erbaş">
 
-    <meta name="author" content="" />
-    <meta name="keywords" content="Villas Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script>
         addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
@@ -50,17 +52,6 @@
 @section('content')
 
 
-
-
-
-
-
-
-
-
-    fghdjkl
-    <br>
-    <br>
     @show
 @include('home._footer')
 @yield('footerjs')

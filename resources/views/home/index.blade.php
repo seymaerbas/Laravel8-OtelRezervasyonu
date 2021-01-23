@@ -1,11 +1,12 @@
+@php
+    $setting=\App\Http\Controllers\HomeController::getsetting();
+@endphp
 @extends('layouts.home')
-@section('title','Laravel Otel Rezervasyon Sitesi Github')
+@section('title', $setting->title)
 
-@section('description')
-    Türkiyenin en konforlu ve lüks oteli..
-@endsection
+@section('description'){{ $setting->description}}@endsection
 
-@section('keywords','Açık büfe, aqua park, ....')
+@section('keywords',$setting->keywords)
 
 @section('content')
 

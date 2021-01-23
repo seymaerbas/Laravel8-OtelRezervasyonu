@@ -25,6 +25,10 @@ Route::get('/', function () {
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
+Route::get('/references', [HomeController::class, 'references'])->name('references');
+Route::get('/fag', [HomeController::class, 'fag'])->name('fag');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
 
 Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('id')->whereAlpha('name')->name('test');
 

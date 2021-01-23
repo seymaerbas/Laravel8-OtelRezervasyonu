@@ -1,38 +1,75 @@
+@php
+    $setting=\App\Http\Controllers\HomeController::getsetting();
+@endphp
 <!-- header -->
 <header>
     <div class="container-fluid">
         <div class="header d-md-flex justify-content-between align-items-center py-3 px-xl-5 px-lg-3 px-2">
             <!-- logo -->
             <div id="logo">
-                <h1><a href="index.html">Villas</a></h1>
+                <h1><a href="{{route('home')}}">Villas</a></h1>
             </div>
             <!-- //logo -->
             <!-- nav -->
+
             <div class="nav_w3ls">
+
                 <nav>
+
+
                     <label for="drop" class="toggle">Menu</label>
                     <input type="checkbox" id="drop" />
                     <ul class="menu">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="{{route('home')}}" class="active">Home</a></li>
+                        <li><a href="{{route('aboutus')}}">About Us</a></li>
+                        <li><a href="{{route('fag')}}">FAQ</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="{{route('references')}}">References</a></li>
+                        @include('home._category')
+
+                        <li><a href="{{route('contact')}}">Contact Us</a></li>
                         <li>
                             <!-- First Tier Drop Down -->
-                            <label for="drop-2" class="toggle toogle-2">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
+
+                            <label for="drop-2" class="toggle toogle-2">My account <span class="fa fa-angle-down" aria-hidden="true"></span>
                             </label>
-                            <a href="#">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <a href="#">My Account <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                             <input type="checkbox" id="drop-2" />
                             <ul>
-                                <li><a href="#services" class="drop-text">Services</a></li>
-                                <li><a href="#blog" class="drop-text">Blog</a></li>
-                                <li><a href="single.html" class="drop-text">Blog Details</a></li>
-                                <li><a href="#why" class="drop-text">What We do</a></li>
-                                <li><a href="#price" class="drop-text">Pricing</a></li>
-                                <li><a href="#testi" class="drop-text">Testimonials</a></li>
-                                <li><a href="book.html" class="drop-text">Booking Form</a></li>
+                                <li>
+                                    @auth
+                                    <a class="dropdown-item" href="#"> <img class="img-profile rounded-circle" src="{{asset('assets')}}/admin/img/seyma.png" style="max-width: 60px">
+
+                                        {{Auth::user()->name }}
+                                    </a>
+                                    @endauth
+                                </li>
+                                <li>
+                                    @guest
+                                    <a href="/login" class="dropdown-item" >
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Login
+                                    </a>
+                                    @endguest
+                                </li>
+                                <li>
+                                    @guest
+                                    <a href="/register" class="dropdown-item" >
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                      Join
+                                    </a>
+                                    @endguest
+                                </li>
+                                <li>
+
+                                        <a href="{{route('logout')}}" class="dropdown-item" >
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            Logout
+                                        </a>
+
+                                </li>
                             </ul>
                         </li>
-                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>

@@ -44,13 +44,13 @@
                                 <form role="form" action="{{route('admin_hotel_store')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
-                                        <label>Parent</label>
+                                        <label>Category</label>
 
                                         <select class="select2-single form-control" name="category_id" id="select2Single">
 
                                             @foreach($datalist as $rs )
 
-                                            <option value="{{$rs->id}}">{{$rs->title}}</option>
+                                                <option value="{{ $rs->id }}">{{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs, $rs->title) }}</option>
 
                                             @endforeach
                                         </select>

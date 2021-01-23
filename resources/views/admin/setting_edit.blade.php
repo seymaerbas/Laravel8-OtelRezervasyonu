@@ -139,7 +139,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Update setting" class="btn btn-primary">
+                    <input type="submit" value="Update setting" class="btn btn-outline-warning">
                 </div>
             </form>
         </div>

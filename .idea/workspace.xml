@@ -2,10 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="273f4194-f990-4127-b0e7-5b99eb46224c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/home/categorytree.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HotelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HotelController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Hotel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Hotel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/setting_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +236,9 @@
       <workItem from="1610698966652" duration="2720000" />
       <workItem from="1610913907571" duration="9245000" />
       <workItem from="1610964507944" duration="20460000" />
-      <workItem from="1611139897084" duration="19971000" />
+      <workItem from="1611139897084" duration="26407000" />
+      <workItem from="1611244902123" duration="22611000" />
+      <workItem from="1611321941076" duration="19355000" />
     </task>
     <task id="LOCAL-00001" summary="Index Changed">
       <created>1607894118647</created>
@@ -334,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611164822443</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Category ve Hotel arasında one to many ilişkisi kuruldu.">
+      <created>1611173862053</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1611173862053</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,6 +382,7 @@
     <MESSAGE value="image yükleme ve image gallery oluşturuldu. Hotel tables değiştirildi." />
     <MESSAGE value="Hatalar giderildi.İmage gallerinin ayrı pencerede açılması sağlandı." />
     <MESSAGE value="Setting site ayarları yapıldı.&#10;dosyalar,tablolar oluşturulup veritabanına uygulandı.&#10;setting_edit.blade.php oluşturuldu." />
-    <option name="LAST_COMMIT_MESSAGE" value="Setting site ayarları yapıldı.&#10;dosyalar,tablolar oluşturulup veritabanına uygulandı.&#10;setting_edit.blade.php oluşturuldu." />
+    <MESSAGE value="Category ve Hotel arasında one to many ilişkisi kuruldu." />
+    <option name="LAST_COMMIT_MESSAGE" value="Category ve Hotel arasında one to many ilişkisi kuruldu." />
   </component>
 </project>

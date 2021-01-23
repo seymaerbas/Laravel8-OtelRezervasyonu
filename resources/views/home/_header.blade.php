@@ -33,7 +33,7 @@
 
                             <label for="drop-2" class="toggle toogle-2">My account <span class="fa fa-angle-down" aria-hidden="true"></span>
                             </label>
-                            <a href="#">My Account <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <a href="{{route('myprofile')}}">My Account <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                             <input type="checkbox" id="drop-2" />
                             <ul>
                                 <li>

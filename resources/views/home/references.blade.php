@@ -1,6 +1,6 @@
 @extends('layouts.home')
 
-@section('title','About us -' . $setting->title)
+@section('title','references -' . $setting->title)
 
 @section('description'){{ $setting->description}}@endsection
 
@@ -24,14 +24,15 @@
         <li class="breadcrumb-item">
             <a href="{{route('home')}}">Home</a>
         </li>
-        <li class="breadcrumb-item active" aria-current="page">About Us</li>
+        <li class="breadcrumb-item active" aria-current="page">References</li>
     </ol>
 </div>
 
 
     <section class="contact py-5" id="contact">
         <div class="container py-xl-5 py-lg-3">
-            {!! $setting->aboutus !!}
+
+            {!! $setting->references !!}
 
         </div>
     </section>

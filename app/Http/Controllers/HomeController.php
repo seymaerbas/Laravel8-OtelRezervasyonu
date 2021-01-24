@@ -19,15 +19,17 @@ class HomeController extends Controller
     public function index()
     {
         $setting = Setting::first();
-        return view('home.index',['setting' =>$setting]);
+        return view('home.index',['setting' =>$setting,'page'=>'home']);
     }
     public function aboutus()
     {
-        return view('home.about');
+        $setting = Setting::first();
+        return view('home.about',['setting' =>$setting]);
     }
     public function references()
     {
-        return view('home.references');
+        $setting = Setting::first();
+        return view('home.references',['setting' =>$setting]);
     }
     public function fag()
     {
@@ -35,7 +37,8 @@ class HomeController extends Controller
     }
     public function contact()
     {
-        return view('home.contact');
+        $setting = Setting::first();
+        return view('home.contact',['setting' =>$setting]);
     }
 
     public function login()

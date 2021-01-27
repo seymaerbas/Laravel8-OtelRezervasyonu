@@ -26,14 +26,21 @@
 
         </li>
     <li class="nav-item">
-
         <a href="{{route('admin_hotels')}}" class="nav-link">
 
             <i class="far fa-fw fa-window-maximize"></i>
             <span>Oteller</span>
         </a>
-
     </li>
+
+    <li class="nav-item">
+        <a href="{{route('admin_message')}}" class="nav-link">
+
+            <i class="far fa-fw fa-window-maximize"></i>
+            <span>Contact Messages</span>
+        </a>
+    </li>
+
     <li class="nav-item">
         <a class="nav-link collapsed" href="#">
             <i class="fab fa-fw fa-wpforms"></i>

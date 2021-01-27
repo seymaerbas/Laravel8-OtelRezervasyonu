@@ -20,7 +20,7 @@ footer -->
                 <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">Links</h3>
                 <ul class="list-unstyled">
                     <li class="mb-3">
-                        <a href="index.html">Home</a>
+                        <a href="{{route('home')}}">Home</a>
                     </li>
                     <li class="mb-3">
                         <a href="{{'aboutus'}}">About Us</a>

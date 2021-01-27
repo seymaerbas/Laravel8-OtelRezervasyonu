@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="273f4194-f990-4127-b0e7-5b99eb46224c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/home/contact.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/references.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_26_233755_create_messages_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/messages.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/messages_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/message.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e340aee7-3d2f-4164-8a8e-66244a98ffc4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e340aee7-3d2f-4164-8a8e-66244a98ffc4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_blank.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_blank.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/about.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/contact.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +165,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/home" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -177,9 +177,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\php\Laravel-Otel-Rezervasyon\resources\views\admin" />
       <recent name="C:\php\Laravel-Otel-Rezervasyon\resources\views\home" />
       <recent name="C:\php\Laravel-Otel-Rezervasyon\resources\views\layouts" />
-      <recent name="C:\php\Laravel-Otel-Rezervasyon\resources\views\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -233,7 +233,9 @@
       <workItem from="1611244902123" duration="22611000" />
       <workItem from="1611321941076" duration="19889000" />
       <workItem from="1611408248521" duration="8673000" />
-      <workItem from="1611487522014" duration="8957000" />
+      <workItem from="1611487522014" duration="9858000" />
+      <workItem from="1611693820850" duration="8452000" />
+      <workItem from="1611748228594" duration="11292000" />
     </task>
     <task id="LOCAL-00001" summary="Index Changed">
       <created>1607894118647</created>
@@ -368,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611421642519</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="User profil fotağrafı ekleme, ek alanlar ekleme yapıldı.&#10;Contact, about ve reference sayfaları getirldi.">
+      <created>1611498161656</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1611498161656</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,6 +403,7 @@
     <MESSAGE value="Category ve Hotel arasında one to many ilişkisi kuruldu." />
     <MESSAGE value="home page ayarlar yapıldı.Sayfa linkleri verildi." />
     <MESSAGE value="user profile page oluşturuldu.Jetstream sayfası panele alındı." />
-    <option name="LAST_COMMIT_MESSAGE" value="user profile page oluşturuldu.Jetstream sayfası panele alındı." />
+    <MESSAGE value="User profil fotağrafı ekleme, ek alanlar ekleme yapıldı.&#10;Contact, about ve reference sayfaları getirldi." />
+    <option name="LAST_COMMIT_MESSAGE" value="User profil fotağrafı ekleme, ek alanlar ekleme yapıldı.&#10;Contact, about ve reference sayfaları getirldi." />
   </component>
 </project>

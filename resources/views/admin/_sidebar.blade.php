@@ -9,10 +9,10 @@
     </a>
     <li class="nav-item">
 
-        <a href="{{route('admin_login')}}" class="nav-link">
+        <a href="{{route('admin_home')}}" class="nav-link">
 
             <i class="far fa-fw fa-window-maximize"></i>
-            <span>Giriş</span>
+            <span>Ana Sayfa</span>
         </a>
 
     </li>
@@ -32,7 +32,13 @@
             <span>Oteller</span>
         </a>
     </li>
+    <li class="nav-item">
+        <a href="{{route('admin_rooms')}}" class="nav-link">
 
+            <i class="far fa-fw fa-window-maximize"></i>
+            <span>Odalar</span>
+        </a>
+    </li>
     <li class="nav-item">
         <a href="{{route('admin_message')}}" class="nav-link">
 
@@ -48,21 +54,7 @@
         </a>
     </li>
 
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('admin_setting')}}" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
-           aria-controls="collapseTable">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Ayarlar</span>
-        </a>
-        <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Options</h6>
-                <a class="collapse-item" href="simple-tables.html">Villas</a>
-                <a class="collapse-item" href="datatables.html">Otel1</a>
-                <a class="collapse-item" href="datatables.html">Otel2</a>
-            </div>
-        </div>
-    </li>
+
     <li class="nav-item">
         <a class="nav-link collapsed" href="{{route('admin_setting')}}">
             <i class="fab fa-fw fa-wpforms"></i>

@@ -30,7 +30,7 @@ class ImageController extends Controller
     public function create($hotel_id)
     {
         $data = Hotel::find($hotel_id);
-        $images = DB::table('images')->where('product_id','=', $hotel_id)->get();
+        $images = DB::table('images')->where('hotel_id','=', $hotel_id)->get();
         return view('admin.image_add',[
             'data' => $data,
             'images'=>$images
@@ -49,7 +49,7 @@ class ImageController extends Controller
 
         $data = new Image;
         $data->title = $request->input('title');
-        $data->product_id=$hotel_id;
+        $data->hotel_id=$hotel_id;
         $data->image = Storage::putFile('images', $request->file('image'));
         $data->save();
         return redirect()->back();

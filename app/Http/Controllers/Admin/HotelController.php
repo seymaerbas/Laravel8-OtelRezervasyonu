@@ -31,7 +31,7 @@ class HotelController extends Controller
      */
     public function create()
     {
-        //$datalist = Category::all();
+
         $datalist = Category::with('children')->get();
         return view('admin.hotel_add',['datalist'=>$datalist]);
     }

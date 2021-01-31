@@ -1,6 +1,3 @@
-<!-- main banner -->
-<div class="main-top" id="home">
-<!-- banner -->
 <div class="banner_w3lspvt">
     <div class="csslider infinity" id="slider1">
         <input type="radio" name="slides" checked="checked" id="slides_1" />
@@ -8,42 +5,17 @@
         <input type="radio" name="slides" id="slides_3" />
         <input type="radio" name="slides" id="slides_4" />
         <ul class="banner_slide_bg">
+            @foreach($slider as $rs)
             <li>
                 <div class="container">
                     <div class="w3ls_banner_txt">
-                        <p>Welcome to our Hotel</p>
-                        <h3 class="w3ls_pvt-title text-wh text-uppercase let">Hotel & Resort Villas</h3>
-                        <a href="about.html" class="btn button-style mt-sm-5 mt-4">Read More</a>
-                    </div>
+                        <p>{{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs->category,$rs->category->title) }}</p>
+                        <h3 class="w3ls_pvt-title text-wh text-uppercase let">{{$rs->title}}</h3>
+                        <a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}" class="btn button-style mt-sm-5 mt-4">Oteli incele</a>
+                    </div class="w3ls_banner_txt">
                 </div>
             </li>
-            <li>
-                <div class="container">
-                    <div class="w3ls_banner_txt">
-                        <p>Welcome to our Villas</p>
-                        <h3 class="w3ls_pvt-title text-wh text-uppercase let">Enjoy Your Moments</h3>
-                        <a href="about.html" class="btn button-style mt-sm-5 mt-4">Read More</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="container">
-                    <div class="w3ls_banner_txt">
-                        <p>Welcome to our Villas</p>
-                        <h3 class="w3ls_pvt-title text-wh text-uppercase let">Modern & Spacious Rooms</h3>
-                        <a href="about.html" class="btn button-style mt-sm-5 mt-4">Read More</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="container">
-                    <div class="w3ls_banner_txt">
-                        <p>Welcome to our Villas</p>
-                        <h3 class="w3ls_pvt-title text-wh text-uppercase let">In the Perfect Location</h3>
-                        <a href="about.html" class="btn button-style mt-sm-5 mt-4">Read More</a>
-                    </div>
-                </div>
-            </li>
+            @endforeach
         </ul>
         <div class="arrows">
             <label for="slides_1"></label>
@@ -55,4 +27,3 @@
 </div>
 <!-- //banner -->
 </div>
-<!-- //main banner -->

@@ -281,7 +281,7 @@ nav ul ul li a {
     margin-bottom: 10px;
 }
 
-/* Second, Third and more Tiers	
+/* Second, Third and more Tiers
  * We move the 2nd and 3rd etc tier dropdowns to the left
  * by the amount of the width of the first tier.
 */
@@ -428,7 +428,7 @@ a.reqe-button {
         font-size: 17px;
     }
 
-    /* 
+    /*
     nav ul li ul li .toggle,
     nav ul ul a {
         background-color: #212121;

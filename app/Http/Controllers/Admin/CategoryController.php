@@ -28,7 +28,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-       // $datalist = DB::table('categories')->get();
+        // $datalist = DB::table('categories')->get();
         //$datalist = DB::select('select * from categories');
         //print_r($datalist);
         //exit();
@@ -44,7 +44,7 @@ class CategoryController extends Controller
     {
         //
 
-       // $datalist = DB::table('categories')->get()->where('parent_id',0);
+        // $datalist = DB::table('categories')->get()->where('parent_id',0);
         //print_r($datalist);
         //exit();
         $datalist = Category::with('children')->get();
@@ -59,14 +59,14 @@ class CategoryController extends Controller
      */
     public function create(Request $request)
     {
-    DB::table('categories')->insert([
-   'parent_id'=> $request->input('parent_id'),
-   'title'=> $request->input('title'),
-   'keywords'=> $request->input('keywords'),
-   'description'=>$request->input('description'),
-   'status'=>$request->input('status')
-]);
-    return redirect()->route('admin_category');
+        DB::table('categories')->insert([
+            'parent_id'=> $request->input('parent_id'),
+            'title'=> $request->input('title'),
+            'keywords'=> $request->input('keywords'),
+            'description'=>$request->input('description'),
+            'status'=>$request->input('status')
+        ]);
+        return redirect()->route('admin_category');
     }
 
     /**
@@ -99,11 +99,11 @@ class CategoryController extends Controller
      */
     public function edit(Category $category,$id)
     {
-       $data = Category::find($id);
+        $data = Category::find($id);
 
-       //$datalist = DB::table('categories')->get()->where('parent_id',0);
+        //$datalist = DB::table('categories')->get()->where('parent_id',0);
         $datalist = Category::with('children')->get();
-       return view('admin.category_edit',['data' => $data,'datalist' => $datalist]);
+        return view('admin.category_edit',['data' => $data,'datalist' => $datalist]);
     }
 
     /**
@@ -115,14 +115,14 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category,$id)
     {
-            $data = Category::find($id);
-            $data->parent_id= $request->input('parent_id');
-            $data->title= $request->input('title');
-            $data->keywords= $request->input('keywords');
-            $data-> description=$request->input('description');
-            $data->status=$request->input('status');
-            $data->save();
-            return redirect()->route('admin_category');
+        $data = Category::find($id);
+        $data->parent_id= $request->input('parent_id');
+        $data->title= $request->input('title');
+        $data->keywords= $request->input('keywords');
+        $data-> description=$request->input('description');
+        $data->status=$request->input('status');
+        $data->save();
+        return redirect()->route('admin_category');
     }
 
     /**
@@ -132,9 +132,9 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-public function destroy(Category $category,$id)
-{
-    DB::table('categories')->where('id','=',$id)->delete();
-    return redirect()->route('admin_category');
-}
+    public function destroy(Category $category,$id)
+    {
+        DB::table('categories')->where('id','=',$id)->delete();
+        return redirect()->route('admin_category');
+    }
 }

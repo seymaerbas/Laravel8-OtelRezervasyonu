@@ -36,6 +36,7 @@
     <!-- Web-Fonts -->
     <link href="//fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+
     <!-- //Web-Fonts -->
 </head>
 

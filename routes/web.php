@@ -16,21 +16,16 @@ use Illuminate\Support\Facades\Route ;
 |
 */
 
-Route::get('/home2', function () {
-    return view('welcome');
-});
-Route::redirect('/anasayfa', '/home');
 
-Route::get('/', function () {
-    return view('home.index');
-});
-
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/references', [HomeController::class, 'references'])->name('references');
 Route::get('/fag', [HomeController::class, 'fag'])->name('fag');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
+Route::get('/hotel/{id}/{slug}', [HomeController::class, 'hotel'])->name('hotel');
+Route::get('/categoryhotels/{id}/{slug}', [HomeController::class, 'categoryhotels'])->name('categoryhotels');
 Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
 
 Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('id')->whereAlpha('name')->name('test');
@@ -57,6 +52,18 @@ Route::prefix('hotel')->group(function (){
     Route::post('update/{id}',[\App\Http\Controllers\Admin\HotelController::class,'update'])->name('admin_hotel_update');
     Route::get('delete/{id}',[\App\Http\Controllers\Admin\HotelController::class,'destroy'])->name('admin_hotel_delete');
     Route::get('show',[\App\Http\Controllers\Admin\HotelController::class,'show'])->name('admin_hotel_show');
+
+
+    });
+//Room
+    Route::prefix('room')->group(function (){
+        Route::get('/',[\App\Http\Controllers\Admin\RoomController::class,'index'])->name('admin_rooms');
+        Route::get('create',[\App\Http\Controllers\Admin\RoomController::class,'create'])->name('admin_room_add');
+        Route::post('store',[\App\Http\Controllers\Admin\RoomController::class,'store'])->name('admin_room_store');
+        Route::get('edit/{id}',[\App\Http\Controllers\Admin\RoomController::class,'edit'])->name('admin_room_edit');
+        Route::post('update/{id}',[\App\Http\Controllers\Admin\RoomController::class,'update'])->name('admin_room_update');
+        Route::get('delete/{id}',[\App\Http\Controllers\Admin\RoomController::class,'destroy'])->name('admin_room_delete');
+        Route::get('show',[\App\Http\Controllers\Admin\RoomController::class,'show'])->name('admin_room_show');
 
 
     });

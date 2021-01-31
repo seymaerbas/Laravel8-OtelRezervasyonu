@@ -2,16 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="273f4194-f990-4127-b0e7-5b99eb46224c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_26_233755_create_messages_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/messages.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/messages_edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/message.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/room.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/room_add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/room_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/category_hotels.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/hotel_detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e340aee7-3d2f-4164-8a8e-66244a98ffc4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e340aee7-3d2f-4164-8a8e-66244a98ffc4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPS/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/web/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HotelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HotelController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Hotel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Hotel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_11_214152_create_sessions_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_01_215204_create_categories_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_01_223904_category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_12_194901_create_hotels_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_12_201727_hotel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_14_114119_create_images_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_14_150541_image.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_26_233755_create_messages_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/categorytree.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/categorytree.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -235,7 +267,12 @@
       <workItem from="1611408248521" duration="8673000" />
       <workItem from="1611487522014" duration="9858000" />
       <workItem from="1611693820850" duration="8452000" />
-      <workItem from="1611748228594" duration="11292000" />
+      <workItem from="1611748228594" duration="12261000" />
+      <workItem from="1611933198725" duration="24635000" />
+      <workItem from="1612002048202" duration="15397000" />
+      <workItem from="1612022554559" duration="1290000" />
+      <workItem from="1612025691058" duration="15907000" />
+      <workItem from="1612111026013" duration="15671000" />
     </task>
     <task id="LOCAL-00001" summary="Index Changed">
       <created>1607894118647</created>
@@ -377,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611498161656</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Contact mesajları ve admin panelde yönetimi sağlandı. Form oluşturulup, mesajlar listelendi.">
+      <created>1611762068569</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1611762068570</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,6 +448,7 @@
     <MESSAGE value="home page ayarlar yapıldı.Sayfa linkleri verildi." />
     <MESSAGE value="user profile page oluşturuldu.Jetstream sayfası panele alındı." />
     <MESSAGE value="User profil fotağrafı ekleme, ek alanlar ekleme yapıldı.&#10;Contact, about ve reference sayfaları getirldi." />
-    <option name="LAST_COMMIT_MESSAGE" value="User profil fotağrafı ekleme, ek alanlar ekleme yapıldı.&#10;Contact, about ve reference sayfaları getirldi." />
+    <MESSAGE value="Contact mesajları ve admin panelde yönetimi sağlandı. Form oluşturulup, mesajlar listelendi." />
+    <option name="LAST_COMMIT_MESSAGE" value="Contact mesajları ve admin panelde yönetimi sağlandı. Form oluşturulup, mesajlar listelendi." />
   </component>
 </project>

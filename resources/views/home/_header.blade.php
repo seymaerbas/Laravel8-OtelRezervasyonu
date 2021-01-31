@@ -1,7 +1,7 @@
 @php
     $setting=\App\Http\Controllers\HomeController::getsetting();
 @endphp
-<!-- header -->
+
 <header>
     <div class="container-fluid">
         <div class="header d-md-flex justify-content-between align-items-center py-3 px-xl-5 px-lg-3 px-2">
@@ -23,8 +23,10 @@
                         <li><a href="{{route('home')}}" class="active">Home</a></li>
                         <li><a href="{{route('aboutus')}}">About Us</a></li>
                         <li><a href="{{route('fag')}}">FAQ</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="{{route('references')}}">References</a></li>
+                        <li>
+                            <!-- First Tier Drop Down -->
+
                         @include('home._category')
 
                         <li><a href="{{route('contact')}}">Contact Us</a></li>
@@ -38,7 +40,7 @@
                             <ul>
                                 <li>
                                     @auth
-                                    <a class="dropdown-item" href="#"> <img class="img-profile rounded-circle" src="{{asset('assets')}}/admin/img/seyma.png" style="max-width: 60px">
+                                    <a class="dropdown-item" href="{{route('myprofile')}}"> <img class="img-profile rounded-circle" src="{{asset('assets')}}/admin/img/seyma.png" style="max-width: 60px">
 
                                         {{Auth::user()->name }}
                                     </a>

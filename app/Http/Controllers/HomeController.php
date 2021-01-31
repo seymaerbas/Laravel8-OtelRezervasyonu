@@ -3,43 +3,78 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Hotel;
+use App\Models\Image;
 use App\Models\Message;
+use App\Models\Room;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use function PHPUnit\Framework\exactly;
+
 class HomeController extends Controller
 {
     public static function categorylist()
     {
-        return Category::where('parent_id', '=' ,0)->with ('children')->get();
+        return Category::where('parent_id', '=', 0)->with('children')->get();
     }
+
     public static function getsetting()
     {
         return Setting::first();
     }
+
     public function index()
     {
+        $slider = Hotel::select('id','title', 'image','category_id','city','slug')->limit(4)->get();
         $setting = Setting::first();
-        return view('home.index',['setting' =>$setting,'page'=>'home']);
+
+        $data = [
+            'setting' => $setting,
+            'slider'=>$slider,
+            'page' => 'home'
+        ];
+        return view('home.index', $data);
+    }
+
+    public function hotel($id,$slug)
+    {
+        $setting=Setting::first();
+        $data=Hotel::find($id);
+        $rooms=Room::where('hotel_id',$id)->get();
+        $datalist=Image::where('hotel_id',$id)->get();
+        return view('home.hotel_detail',['setting'=>$setting,'data'=>$data,'datalist'=>$datalist,'rooms'=>$rooms]);
+    }
+
+    public function categoryhotels($id,$slug)
+    {
+        $datalist=Hotel::where('category_id',$id)->get();
+        $data=Category::find($id);
+
+        return view('home.category_hotels',['data'=>$data,'datalist'=>$datalist]);
     }
     public function aboutus()
     {
+
         $setting = Setting::first();
-        return view('home.about',['setting' =>$setting]);
+        return view('home.about', ['setting' => $setting]);
     }
+
     public function references()
     {
         $setting = Setting::first();
-        return view('home.references',['setting' =>$setting]);
+        return view('home.references', ['setting' => $setting]);
     }
+
     public function fag()
     {
         return view('home.fag');
     }
+
     public function contact()
     {
         $setting = Setting::first();
-        return view('home.contact',['setting' =>$setting]);
+        return view('home.contact', ['setting' => $setting]);
     }
 
     public function sendmessage(Request $request)
@@ -52,34 +87,33 @@ class HomeController extends Controller
         $data->message = $request->input('message');
         $data->save();
 
-        return redirect()->route('contact')->with('success','Mesajınız başarılı bir şekilde kaydedilmiştir!');
+        return redirect()->route('contact')->with('success', 'Mesajınız başarılı bir şekilde kaydedilmiştir!');
     }
 
     public function login()
     {
         return view('admin.login');
     }
+
     public function logincheck(Request $request)
     {
-       if($request->isMethod('post'))
-       {
-           $credentials = $request->only('email','password');
-           if(Auth::attempt($credentials)){
-               $request->session()->regenerate();
+        if ($request->isMethod('post')) {
+            $credentials = $request->only('email', 'password');
+            if (Auth::attempt($credentials)) {
+                $request->session()->regenerate();
 
-               return redirect()->intended('admin');
+                return redirect()->intended('admin');
 
-           }
-           return back()->withErrors([
-               'email'=>'The provided credentials do not match our records.',]
-           );
+            }
+            return back()->withErrors([
+                    'email' => 'The provided credentials do not match our records.',]
+            );
 
-       }
-       else
-       {
-           return view('admin.login');
-       }
+        } else {
+            return view('admin.login');
+        }
     }
+
     public function logout(Request $request)
     {
         Auth::logout();

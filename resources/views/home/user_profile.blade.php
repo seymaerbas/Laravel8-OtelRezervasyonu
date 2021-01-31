@@ -1,6 +1,9 @@
 
     @extends('layouts.home')
-    @section('title', 'User Profile')
+    @php
+        $setting=\App\Http\Controllers\HomeController::getsetting();
+    @endphp
+    @section('title', 'User Profile '.$setting->title)
 
 
 

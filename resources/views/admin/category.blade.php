@@ -39,10 +39,9 @@
                                 <th>Delete</th>
                             </tr>
                             </thead>
+                            <tbody>
                             @foreach($datalist as $rs )
 
-
-                            <tbody>
                             <tr>
                                 <td>{{$rs->id}}</td>
                                 <td>{{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs, $rs->title)  }}</td>
@@ -52,8 +51,9 @@
                                 <td><a href="{{route('admin_category_delete',['id' => $rs->id])}}" onclick="return confirm('Delete! Are you sure?' )"><img src="{{asset('assets/admin/img')}}/delete.png" height="40"></a></td>
 
                             </tr>
-                            </tbody>
+
                             @endforeach
+                            </tbody>
                         </table>
                     </div>
                     <!-- Modal Logout -->

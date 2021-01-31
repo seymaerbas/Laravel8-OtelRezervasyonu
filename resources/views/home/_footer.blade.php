@@ -73,7 +73,7 @@ footer -->
                         @endif
                         @if($setting->twitter !=null)
                         <li class="w3_mobamu_twitter">
-                            <a href="$setting->twitter" target="_blank">
+                            <a href="{{$setting->twitter}}" target="_blank">
                                 <span class="fa fa-twitter"></span>
                             </a>
                         </li>

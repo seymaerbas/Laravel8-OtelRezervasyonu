@@ -4,7 +4,7 @@
 
 @extends('layouts.home')
 
-@section('Kategori ', $setting->title)
+@section('title ', $data->title, "Kategori")
 @include('home._header')
 
 

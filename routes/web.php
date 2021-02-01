@@ -26,9 +26,12 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
 Route::get('/hotel/{id}/{slug}', [HomeController::class, 'hotel'])->name('hotel');
 Route::get('/categoryhotels/{id}/{slug}', [HomeController::class, 'categoryhotels'])->name('categoryhotels');
+Route::get('/addtocard/{id}', [HomeController::class, 'addtocard'])->name('addtocard');
+
 Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
 
 Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('id')->whereAlpha('name')->name('test');
+Route::get('/addtocard/{id}', [HomeController::class, 'test'])->whereAlpha('name')->name('addtocard');
 
 //Admin
 Route::middleware('auth')->prefix('admin')->group(function () {

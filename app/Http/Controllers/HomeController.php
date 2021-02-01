@@ -28,10 +28,17 @@ class HomeController extends Controller
     {
         $slider = Hotel::select('id','title', 'image','category_id','city','slug')->limit(4)->get();
         $setting = Setting::first();
-
+        $firsat = Hotel::select('id','title', 'image','category_id','city','slug','address','country')->limit(3)->inRandomOrder()->get();
+        $last= Hotel::select('id','title', 'image','category_id','city','slug','address','country')->limit(3)->orderByDesc('id')->get();
+        $picked = Hotel::select('id','title', 'image','category_id','city','slug','address','country')->limit(3)->inRandomOrder()->get();
+#print_r($picked);
+#exit();
         $data = [
             'setting' => $setting,
             'slider'=>$slider,
+            'firsat'=>$firsat,
+            'last'=>$last,
+            'picked'=>$picked,
             'page' => 'home'
         ];
         return view('home.index', $data);
@@ -52,6 +59,13 @@ class HomeController extends Controller
         $data=Category::find($id);
 
         return view('home.category_hotels',['data'=>$data,'datalist'=>$datalist]);
+    }
+    public function addtocard($id)
+    {
+        echo "Add to Cart <br>";
+        $data=Hotel::find($id);
+    print_r($data);
+    exit();
     }
     public function aboutus()
     {

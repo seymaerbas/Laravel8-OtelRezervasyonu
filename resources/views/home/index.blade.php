@@ -13,125 +13,107 @@
     @include('home._slider')
 
 
-    <!-- banner bottom -->
-    <div class="banner-bottom py-5">
-        <div class="d-md-flex container py-xl-3 py-lg-3">
-            <div class="banner-left-bottom-w3ls">
-                <h6 class="text-wh let">Sed do eiusmod tempor</h6>
-                <h3 class="text-wh my-3">Welcome to our Villas</h3>
-                <p>Enjoy Your Every Moments With Your Partner In Villas Paradise Resort.<br>Sed do eiusmod tempor incididunt ut
-                    labore.</p>
-            </div>
-            <div class="button offset-lg-2 offset-md-1">
-                <a href="about.html" class="btn w3ls-button-mobamu">Read More</a>
-            </div>
-        </div>
-    </div>
-    <!-- //banner bottom -->
 
-    <!-- about -->
-    <section class="about py-5" id="about">
-        <div class="container py-xl-5 py-lg-3">
-            <div class="row py-md-5">
-                <div class="col-lg-4 about-left-w3pvt offset-lg-1 mt-lg-4">
-                    <div class="main-img">
-                        <img src="{{asset('assets')}}/images/blog1.jpg" alt="" class="img-fluid pos-aboimg">
-                        <img src="{{asset('assets')}}/images/blog2.jpg" alt="" class="img-fluid pos-aboimg2">
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-7 about-right offset-xl-1">
-                    <h4 class="sub-tittle-w3layouts let">About Us</h4>
-                    <h3 class="tittle-w3layouts text-uppercase pr-lg-5 mt-2">Duis aute irure olor in cillum solore</h3>
-                    <p class="mt-4 mb-4">Lorem ipsum dolor sit amet Neque porro quisquam est qui dolorem Lorem int ipsum dolor sit
-                        amet id tempor felis. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaLorem ipsum dolor sit.</p>
-                    <a href="about.html" class="btn button-style-2 mt-sm-5 mt-4">Read More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //about -->
 
     <!-- price -->
     <div class="rooms-w3ls bg-li py-5" id="price">
         <div class="container-fluid py-xl-5 py-lg-3">
-            <h3 class="tittle text-center text-bl font-weight-bold">Rooms & Suites</h3>
-            <p class="sub-tittle text-center mt-2 mb-sm-5 mb-4 pb-xl-3">Sed do eiusmod tempor incididunt ut labore et dolore
-                magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+            <h3 class="tittle text-center text-bl font-weight-bold">Fırsatlar</h3>
+            <p class="sub-tittle text-center mt-2 mb-sm-5 mb-4 pb-xl-3"></p>
+
             <div class="row">
+                @foreach($firsat as $rs)
                 <div class="col-lg-4 price-mobamus">
+
                     <div class="price-top">
-                        <a href="single.html">
-                            <img src="{{asset('assets')}}/images/price1.jpg" alt="" class="img-fluid" />
+                        <a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}">
+                            <img src="{{ Storage::url($rs->image) }}" alt="" class="img-fluid" />
                         </a>
                     </div>
                     <div class="price-w3ls-bottom p-4">
-                        <h4 class="my-2"><a href="single.html">Suite</a></h4>
+                        <h4 class="my-2"><a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}">{{$rs->title}}</a></h4>
                         <div class="lm-item-price">
                             <h6>
-                                <span class="price-top-head">$</span>
-                                <span class="price-midd-head">195</span>
-                                <span class="price-right-head">/ per month</span>
+                                <span class="price-midd-head">{{$rs->city}}</span>
                             </h6>
                         </div>
                         <ul class="style-lists">
-                            <li>Only 5 rooms are available </li>
-                            <li>Breakfast included </li>
-                            <li>Price does not include VAT & services fee </li>
+                            <li>{{$rs->address}} </li>
+                            <li>{{$rs->country}}</li>
                         </ul>
-                        <a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Book Now</a>
+                        <a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}" class="btn button-style-2 mt-sm-5 mt-4">Book Now</a>
+
                     </div>
                 </div>
-                <div class="col-lg-4 price-mobamus my-lg-0 my-5">
-                    <div class="price-top">
-                        <a href="single.html">
-                            <img src="{{asset('assets')}}/images/price2.jpg" alt="" class="img-fluid" />
-                        </a>
-                    </div>
-                    <div class="price-w3ls-bottom p-4">
-                        <h4 class="my-2"><a href="single.html">Deluxe Room</a></h4>
-                        <div class="lm-item-price">
-                            <h6>
-                                <span class="price-top-head">$</span>
-                                <span class="price-midd-head">120</span>
-                                <span class="price-right-head">/ per month</span>
-                            </h6>
-                        </div>
-                        <ul class="style-lists">
-                            <li>Perfect for traveling couples </li>
-                            <li>Breakfast included </li>
-                            <li>Concierge services </li>
-                        </ul>
-                        <a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Book Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 price-mobamus">
-                    <div class="price-top">
-                        <a href="single.html">
-                            <img src="{{asset('assets')}}/images/price3.jpg" alt="" class="img-fluid" />
-                        </a>
-                    </div>
-                    <div class="price-w3ls-bottom p-4">
-                        <h4 class="my-2"><a href="single.html">Family Room</a></h4>
-                        <div class="lm-item-price">
-                            <h6>
-                                <span class="price-top-head">$</span>
-                                <span class="price-midd-head">182</span>
-                                <span class="price-right-head">/ per month</span>
-                            </h6>
-                        </div>
-                        <ul class="style-lists">
-                            <li>Two double beds </li>
-                            <li>Babysitting facilities</li>
-                            <li>1 free bed available on request</li>
-                        </ul>
-                        <a href="book.html" class="btn button-style-2 mt-sm-5 mt-4">Book Now</a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
-    </div>
+        <div class="rooms-w3ls bg-li py-5" id="price">
+            <div class="container-fluid py-xl-5 py-lg-3">
+                <h3 class="tittle text-center text-bl font-weight-bold">En Son Eklenenler</h3>
+                <p class="sub-tittle text-center mt-2 mb-sm-5 mb-4 pb-xl-3"></p>
+
+                <div class="row">
+                    @foreach($last as $rs)
+                        <div class="col-lg-4 price-mobamus">
+
+                            <div class="price-top">
+                                <a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}">
+                                    <img src="{{ Storage::url($rs->image) }}" alt="" class="img-fluid" />
+                                </a>
+                            </div>
+                            <div class="price-w3ls-bottom p-4">
+                                <h4 class="my-2"><a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}">{{$rs->title}}</a></h4>
+                                <div class="lm-item-price">
+                                    <h6>
+                                        <span class="price-midd-head">{{$rs->city}}</span>
+                                    </h6>
+                                </div>
+                                <ul class="style-lists">
+                                    <li>{{$rs->address}} </li>
+                                    <li>{{$rs->country}}</li>
+
+                                </ul>
+                                <a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}" class="btn button-style-2 mt-sm-5 mt-4">Book Now</a>
+                               <br>
+                                <a href="{{route('addtocard',['id' => $rs->id])}}" class="btn button-style-2 mt-sm-5 mt-4">Add To Cart</a>
+
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="rooms-w3ls bg-li py-5" id="price">
+                <div class="container-fluid py-xl-5 py-lg-3">
+                    <h3 class="tittle text-center text-bl font-weight-bold">Sizin İçin Seçtiklerimiz</h3>
+                    <p class="sub-tittle text-center mt-2 mb-sm-5 mb-4 pb-xl-3"></p>
+
+                    <div class="row">
+                        @foreach($picked as $rs)
+                            <div class="col-lg-4 price-mobamus">
+
+                                <div class="price-top">
+                                    <a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}">
+                                        <img src="{{ Storage::url($rs->image) }}" alt="" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="price-w3ls-bottom p-4">
+                                    <h4 class="my-2"><a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}">{{$rs->title}}</a></h4>
+                                    <div class="lm-item-price">
+                                        <h6>
+                                            <span class="price-midd-head">{{$rs->city}}</span>
+                                        </h6>
+                                    </div>
+                                    <ul class="style-lists">
+                                        <li>{{$rs->address}} </li>
+                                        <li>{{$rs->country}}</li>
+                                    </ul>
+                                    <a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}" class="btn button-style-2 mt-sm-5 mt-4">Book Now</a>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
     <!-- //price -->
 
     <!-- why -->

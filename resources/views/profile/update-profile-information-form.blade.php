@@ -70,6 +70,7 @@
             <x-jet-input id="phone" type="text" class="mt-1 block w-full" wire:model.defer="state.phone" />
             <x-jet-input-error for="phone" class="mt-2" />
         </div>
+
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="address" value="{{ __('Address') }}" />
             <x-jet-input id="address" type="text" class="mt-1 block w-full" wire:model.defer="state.address" />

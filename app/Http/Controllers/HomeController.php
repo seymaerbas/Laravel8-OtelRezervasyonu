@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Hotel;
 use App\Models\Image;
 use App\Models\Message;
+use App\Models\Review;
 use App\Models\Room;
 use App\Models\Setting;
 use Illuminate\Http\Request;
@@ -44,13 +45,42 @@ class HomeController extends Controller
         return view('home.index', $data);
     }
 
+    public function gethotel(Request $request)
+    {
+        $search=$request->input('search');
+        $count=Hotel::where('title','like','%'.$search.'%')->get()->count();
+        if($count==1)
+        {
+            $data=Hotel::where('title','like','%'.$search.'%')->first();
+            return redirect()->route('hotel',['id'=>$data->id,'slug'=>$data->slug]);
+        }
+        else
+        {
+            return redirect()->route('hotellist',['search'=>$search]);
+        }
+
+
+    }
+    public function search_page(){
+        $setting=Setting::first();
+        return view('home.search_page',['setting'=>$setting,'page'=>'home']);
+    }
+    public function hotellist($search){
+        $setting=Setting::first();
+        $datalist=Hotel::where('title','like','%'.$search.'%')->get();
+
+        return view('home.search_hotels',['search'=>$search,'datalist'=>$datalist,'setting'=>$setting]);
+
+    }
+
     public function hotel($id,$slug)
     {
         $setting=Setting::first();
         $data=Hotel::find($id);
         $rooms=Room::where('hotel_id',$id)->get();
+        $reviews=Review::where('hotel_id',$id)->get();
         $datalist=Image::where('hotel_id',$id)->get();
-        return view('home.hotel_detail',['setting'=>$setting,'data'=>$data,'datalist'=>$datalist,'rooms'=>$rooms]);
+        return view('home.hotel_detail',['setting'=>$setting,'data'=>$data,'datalist'=>$datalist,'rooms'=>$rooms,'reviews'=>$reviews]);
     }
 
     public function categoryhotels($id,$slug)
@@ -60,13 +90,7 @@ class HomeController extends Controller
 
         return view('home.category_hotels',['data'=>$data,'datalist'=>$datalist]);
     }
-    public function addtocard($id)
-    {
-        echo "Add to Cart <br>";
-        $data=Hotel::find($id);
-    print_r($data);
-    exit();
-    }
+
     public function aboutus()
     {
 
@@ -89,6 +113,24 @@ class HomeController extends Controller
     {
         $setting = Setting::first();
         return view('home.contact', ['setting' => $setting]);
+    }
+    public function sendreview(Request $request,$id)
+    {
+        $data = new Review;
+
+        $data->user_id = Auth::id();
+        $hotel = Hotel::find($id);
+        $data->hotel_id=$id;
+        $data->subject = $request->input('subject');
+        $data->review = $request->input('review');
+        $data->IP = $_SERVER['REMOTE_ADDR'];
+        $data->rate = $request->input('rate');
+
+
+
+        $data->save();
+
+        return redirect()->route('hotel',['id'=>$hotel->id,'slug'=>$hotel->slug])->with('success','Yourumunuz kaydedilmiştir');
     }
 
     public function sendmessage(Request $request)

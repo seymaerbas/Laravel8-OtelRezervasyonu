@@ -26,12 +26,14 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
 Route::get('/hotel/{id}/{slug}', [HomeController::class, 'hotel'])->name('hotel');
 Route::get('/categoryhotels/{id}/{slug}', [HomeController::class, 'categoryhotels'])->name('categoryhotels');
-Route::get('/addtocard/{id}', [HomeController::class, 'addtocard'])->name('addtocard');
-
+Route::get('/search_page', [HomeController::class, 'search_page'])->name('search_page');
+Route::post('/gethotel', [HomeController::class, 'gethotel'])->name('gethotel');
+Route::get('/hotellist/{search}', [HomeController::class, 'hotellist'])->name('hotellist');
 Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
+Route::post('/sendreview/{id}/{slug}', [HomeController::class, 'sendreview'])->name('sendreview');
+
 
 Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('id')->whereAlpha('name')->name('test');
-Route::get('/addtocard/{id}', [HomeController::class, 'test'])->whereAlpha('name')->name('addtocard');
 
 //Admin
 Route::middleware('auth')->prefix('admin')->group(function () {

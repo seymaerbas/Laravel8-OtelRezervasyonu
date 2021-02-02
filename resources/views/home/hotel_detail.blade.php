@@ -2,10 +2,58 @@
     $setting=\App\Http\Controllers\HomeController::getsetting();
 @endphp
 @extends('layouts.home')
-@section('Hotel Detayı', $setting->title)
+@section('Hotel Detayı',$setting->title)
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @livewireStyles
+    <style>
+        .checked {
+            color: orange;
+        }
+    </style>
+    <style>*{
+            margin: 0;
+            padding: 0;
+        }
+        .rate {
+            float: left;
+            height: 46px;
+            padding: 0 10px;
+        }
+        .rate:not(:checked) > input {
+            position:absolute;
+            top:-9999px;
+        }
+        .rate:not(:checked) > label {
+            float:right;
+            width:1em;
+            overflow:hidden;
+            white-space:nowrap;
+            cursor:pointer;
+            font-size:30px;
+            color:#ccc;
+        }
+        .rate:not(:checked) > label:before {
+            content: '★ ';
+        }
+        .rate > input:checked ~ label {
+            color: #ffc700;
+        }
+        .rate:not(:checked) > label:hover,
+        .rate:not(:checked) > label:hover ~ label {
+            color: #deb217;
+        }
+        .rate > input:checked + label:hover,
+        .rate > input:checked + label:hover ~ label,
+        .rate > input:checked ~ label:hover,
+        .rate > input:checked ~ label:hover ~ label,
+        .rate > label:hover ~ input:checked ~ label {
+            color: #c59b08;
+        }
+    </style>
 <style>
     .mySlides {display:none;}
 </style>
@@ -147,7 +195,7 @@
                                 </td>
 
                                 <td><br><input type="number" style="width: 50px;" value="adet" name="adet" id="adet"/></td>
-                                <td><br>{{$rs->price}}</td>
+                                <td><br>{{$rs->price}} ₺</td>
                                 <td><a href="#" class="btn button-style-3 mt-sm-2 mt-1">Book Now</a></td>
 
                             </tr>
@@ -159,8 +207,66 @@
             </div>
 
             <div id="Tokyo" class="tabcontent">
-                <h3>Tokyo</h3>
-                <p>Tokyo is the capital of Japan.</p>
+                <h3>Yorumlar</h3>
+
+                @foreach($reviews as $rs)
+                    <ul class="media-list">
+                        <li class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="#" alt="" />
+                            </a>
+                            <div class="media-body">
+                                <h5 class="media-heading"><a href="#">{{$rs->user->name}}</a></h5>
+                                <span>{{$rs->created_at}}</span>
+                                <strong>{{$rs->subject}}</strong>
+                                <p>{{$rs->review}}</p>
+                                <i class="fa fa-star @if ($rs->rate>0) checked @endif"></i>
+                                <i class="fa fa-star @if ($rs->rate>1) checked @endif"></i>
+                                <i class="fa fa-star @if ($rs->rate>2) checked @endif"></i>
+                                <i class="fa fa-star @if ($rs->rate>3) checked @endif"></i>
+                                <i class="fa fa-star @if ($rs->rate>4) checked @endif"></i>
+
+                            </div>
+                        </li>
+                    </ul>
+                @endforeach
+                <div class="comment-post">
+                    @include('home.message')
+                    <h4>Leave a comment</h4>
+                    <form action="{{route('sendreview',['id'=>$data->id,'slug'=>$data->slug])}}" method="post" class="comment-form" name="review-form">
+                        @csrf
+                        <div class="row" style="padding-left: 20px;">
+                            <br>
+                            <div class="span8">
+                                <label>Subject <span>*</span></label>
+                                <input type="text" name="subject" id="subject" class="input-block-level" placeholder="Your subject" />
+                            </div>
+
+                            <div class="span10">
+                                <label>Review <span>*</span></label>
+                                <textarea rows="9" name="review" id="review" class="input-block-level" placeholder="Your comment"></textarea>
+
+                            </div>
+                        </div>
+                        <div class="rate">
+                            <input type="radio" name="rate" id="star5"  value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" name="rate" id="star4"  value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" name="rate" id="star3"  value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" name="rate" id="star2"  value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" name="rate" id="star1"  value="1" />
+                            <label for="star1" title="text">1 star</label>
+                        </div>
+                        @auth
+                            <button class="btn btn-theme" type="submit">Submit review</button>
+                        @else
+                            <a href="/login" class="btn btn-theme">For submit please Login</a>
+                        @endauth
+                    </form>
+                </div>
             </div>
 
             <script>

@@ -81,6 +81,7 @@
 
 
             <div class="w3-content w3-display-container">
+                <img class="mySlides" src="{{ Storage::url($data->image) }}" style="width:100%">
                 @foreach($datalist as $rs)
                 <img class="mySlides" src="{{ Storage::url($rs->image) }}" style="width:100%">
                 @endforeach
@@ -138,13 +139,16 @@
                         <tbody>
                         @foreach($rooms as $rs )
                             <tr>
-                                <td>{{$rs->title}}</td>
-                                <td>
-                                    <img src="{{ Storage::url($rs->image) }}" height="30" alt="">
+                                <td><br>{{$rs->title}}</td>
+                                <td><a href="{{ Storage::url($rs->image) }}" onclick="return !window.open(this.href, '','top=50 left=100 width=1100 height=700') ">
+
+                                    <br><img src="{{ Storage::url($rs->image) }}" height="30" alt="">
+                                        </a>
                                 </td>
-                                <td><input type="number" style="width: 50px;" value="adet" name="adet" id="adet"/></td>
-                                <td>{{$rs->price}}</td>
-                                <td>rezerve</td>
+
+                                <td><br><input type="number" style="width: 50px;" value="adet" name="adet" id="adet"/></td>
+                                <td><br>{{$rs->price}}</td>
+                                <td><a href="#" class="btn button-style-3 mt-sm-2 mt-1">Book Now</a></td>
 
                             </tr>
                         @endforeach

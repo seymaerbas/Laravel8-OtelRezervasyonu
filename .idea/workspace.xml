@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="273f4194-f990-4127-b0e7-5b99eb46224c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/category_hotels.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/category_hotels.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/hotel_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/hotel_detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -235,7 +233,7 @@
       <workItem from="1612022554559" duration="1290000" />
       <workItem from="1612025691058" duration="15907000" />
       <workItem from="1612111026013" duration="16023000" />
-      <workItem from="1612205029052" duration="11581000" />
+      <workItem from="1612205029052" duration="14862000" />
     </task>
     <task id="LOCAL-00001" summary="Index Changed">
       <created>1607894118647</created>
@@ -391,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612134585867</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Otellerin Anasayfada Gösterilmesi.">
+      <created>1612222621613</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1612222621613</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,6 +425,7 @@
     <MESSAGE value="User profil fotağrafı ekleme, ek alanlar ekleme yapıldı.&#10;Contact, about ve reference sayfaları getirldi." />
     <MESSAGE value="Contact mesajları ve admin panelde yönetimi sağlandı. Form oluşturulup, mesajlar listelendi." />
     <MESSAGE value="Hatalar düzeltildi.&#10;Category Hotel içerikleri listelendi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hatalar düzeltildi.&#10;Category Hotel içerikleri listelendi" />
+    <MESSAGE value="Otellerin Anasayfada Gösterilmesi." />
+    <option name="LAST_COMMIT_MESSAGE" value="Otellerin Anasayfada Gösterilmesi." />
   </component>
 </project>

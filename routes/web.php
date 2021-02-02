@@ -66,7 +66,7 @@ Route::prefix('hotel')->group(function (){
         Route::get('edit/{id}',[\App\Http\Controllers\Admin\RoomController::class,'edit'])->name('admin_room_edit');
         Route::post('update/{id}',[\App\Http\Controllers\Admin\RoomController::class,'update'])->name('admin_room_update');
         Route::get('delete/{id}',[\App\Http\Controllers\Admin\RoomController::class,'destroy'])->name('admin_room_delete');
-        Route::get('show',[\App\Http\Controllers\Admin\RoomController::class,'show'])->name('admin_room_show');
+        Route::get('show/{id}',[\App\Http\Controllers\Admin\RoomController::class,'show'])->name('admin_room_show');
 
 
     });

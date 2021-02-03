@@ -65,6 +65,7 @@ class HomeController extends Controller
         $setting=Setting::first();
         return view('home.search_page',['setting'=>$setting,'page'=>'home']);
     }
+
     public function hotellist($search){
         $setting=Setting::first();
         $datalist=Hotel::where('title','like','%'.$search.'%')->get();
@@ -107,6 +108,11 @@ class HomeController extends Controller
     public function fag()
     {
         return view('home.fag');
+    }
+    public function review()
+    {
+        $setting = Review::first();
+        return view('home.review', ['setting' => $setting]);
     }
 
     public function contact()

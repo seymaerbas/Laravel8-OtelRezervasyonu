@@ -46,6 +46,13 @@
             <span>Contact Messages</span>
         </a>
     </li>
+    <li class="nav-item">
+        <a href="{{route('admin_review')}}" class="nav-link">
+
+            <i class="far fa-fw fa-window-maximize"></i>
+            <span>Review</span>
+        </a>
+    </li>
 
     <li class="nav-item">
         <a class="nav-link collapsed" href="#">

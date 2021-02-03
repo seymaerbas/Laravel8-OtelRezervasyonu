@@ -12,7 +12,7 @@
                         <p>{{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs->category,$rs->category->title) }}</p>
                         <h3 class="w3ls_pvt-title text-wh text-uppercase let">{{$rs->title}}</h3>
                         <a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}" class="btn button-style mt-sm-5 mt-4">Oteli incele</a>
-                    </div class="w3ls_banner_txt">
+                    </div >
                 </div>
             </li>
             @endforeach

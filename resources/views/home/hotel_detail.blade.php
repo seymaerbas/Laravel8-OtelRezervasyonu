@@ -207,9 +207,11 @@
             </div>
 
             <div id="Tokyo" class="tabcontent">
+
                 <h3>Yorumlar</h3>
 
                 @foreach($reviews as $rs)
+
                     <ul class="media-list">
                         <li class="media">
                             <a class="pull-left" href="#">
@@ -220,6 +222,7 @@
                                 <span>{{$rs->created_at}}</span>
                                 <strong>{{$rs->subject}}</strong>
                                 <p>{{$rs->review}}</p>
+
                                 <i class="fa fa-star @if ($rs->rate>0) checked @endif"></i>
                                 <i class="fa fa-star @if ($rs->rate>1) checked @endif"></i>
                                 <i class="fa fa-star @if ($rs->rate>2) checked @endif"></i>
@@ -233,22 +236,24 @@
                 <div class="comment-post">
                     @include('home.message')
                     <h4>Leave a comment</h4>
+
                     <form action="{{route('sendreview',['id'=>$data->id,'slug'=>$data->slug])}}" method="post" class="comment-form" name="review-form">
                         @csrf
-                        <div class="row" style="padding-left: 20px;">
+                        <div class="" style="padding-left: 20px;">
                             <br>
                             <div class="span8">
                                 <label>Subject <span>*</span></label>
                                 <input type="text" name="subject" id="subject" class="input-block-level" placeholder="Your subject" />
                             </div>
 
-                            <div class="span10">
+                            <div class="span5">
                                 <label>Review <span>*</span></label>
-                                <textarea rows="9" name="review" id="review" class="input-block-level" placeholder="Your comment"></textarea>
+                                <textarea rows="5" name="review" id="review" class="input-block-level" placeholder="Your comment"></textarea>
 
                             </div>
                         </div>
                         <div class="rate">
+
                             <input type="radio" name="rate" id="star5"  value="5" />
                             <label for="star5" title="text">5 stars</label>
                             <input type="radio" name="rate" id="star4"  value="4" />

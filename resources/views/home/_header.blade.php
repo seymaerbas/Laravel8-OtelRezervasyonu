@@ -6,11 +6,23 @@
     <div class="container-fluid">
         <div class="header d-md-flex justify-content-between align-items-center py-3 px-xl-5 px-lg-3 px-2">
             <!-- logo -->
-            <div id="logo">
-                <h1><a href="{{route('home')}}">Villas</a></h1>
-            </div>
+
             <!-- //logo -->
             <!-- nav -->
+
+                <section class="contact py-2" id="contact">
+                    <div class="container py-xl-2 py-lg-1">
+                        <div class="search">
+                            <form action="{{route('gethotel')}}" method="post" class="input-append">
+                                @csrf
+                                @livewire('search')
+                                <button class="btn btn-dark" type="submit">Search</button>
+                            </form>
+                            @livewireScripts
+                        </div>
+
+                    </div>
+                </section>
 
             <div class="nav_w3ls">
 
@@ -18,7 +30,9 @@
 
 
                     <label for="drop" class="toggle">Menu</label>
+
                     <input type="checkbox" id="drop" />
+
                     <ul class="menu">
                         <li><a href="{{route('home')}}" class="active">Home</a></li>
                         <li><a href="{{route('aboutus')}}">About Us</a></li>
@@ -64,6 +78,30 @@
                                 </li>
                                 <li>
 
+                                    <a href="/contact" class="dropdown-item" >
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        My message
+                                    </a>
+
+                                </li>
+                                <li>
+
+                                    <a href="" class="dropdown-item" >
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        My rezervation
+                                    </a>
+
+                                </li>
+                                <li>
+
+                                        <a href="{{route('user_review')}}" class="dropdown-item" >
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                         Review
+                                        </a>
+
+                                </li>
+                                <li>
+
                                         <a href="{{route('logout')}}" class="dropdown-item" >
                                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                             Logout
@@ -73,7 +111,6 @@
 
 
                             </ul>
-                        <li><a href="{{route('search_page')}}">Search</a></li>
                         </li>
                     </ul>
                 </nav>

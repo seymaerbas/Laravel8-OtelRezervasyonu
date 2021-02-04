@@ -105,6 +105,7 @@
                                     <ul class="style-lists">
                                         <li>{{$rs->address}} </li>
                                         <li>{{$rs->country}}</li>
+
                                     </ul>
                                     <a href="{{route('hotel',['id' => $rs->id,'slug' => $rs->slug])}}" class="btn button-style-2 mt-sm-5 mt-4">Book Now</a>
                                 </div>

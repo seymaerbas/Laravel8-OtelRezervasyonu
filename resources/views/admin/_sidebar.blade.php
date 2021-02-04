@@ -53,7 +53,13 @@
             <span>Review</span>
         </a>
     </li>
+    <li class="nav-item">
+        <a href="{{route('admin_faq')}}" class="nav-link">
 
+            <i class="far fa-fw fa-window-maximize"></i>
+            <span>FAQ</span>
+        </a>
+    </li>
     <li class="nav-item">
         <a class="nav-link collapsed" href="#">
             <i class="fab fa-fw fa-wpforms"></i>

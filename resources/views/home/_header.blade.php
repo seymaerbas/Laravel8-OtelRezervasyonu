@@ -36,7 +36,7 @@
                     <ul class="menu">
                         <li><a href="{{route('home')}}" class="active">Home</a></li>
                         <li><a href="{{route('aboutus')}}">About Us</a></li>
-                        <li><a href="{{route('fag')}}">FAQ</a></li>
+                        <li><a href="{{route('faq')}}">FAQ</a></li>
                         <li><a href="{{route('references')}}">References</a></li>
                         <li>
                             <!-- First Tier Drop Down -->

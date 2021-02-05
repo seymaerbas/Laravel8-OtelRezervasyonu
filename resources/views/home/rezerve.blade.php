@@ -46,7 +46,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 form-group">
                                         <label>First Name</label>
-                                        <input class="form-control" type="text" name="name" placeholder="Type Here.." required="">
+                                        <input class="form-control" type="text" name="name"  placeholder="Type Here.." required="">
                                     </div>
                                     <div class="col-lg-6 form-group">
                                         <label>Last Name</label>
@@ -62,6 +62,7 @@
                                         <label>Phone Number</label>
                                         <input class="form-control" type="text" name="phone" placeholder="Phone Number" required="">
                                     </div>
+
 
                                 </div>
                                 <div class="row">
@@ -84,15 +85,27 @@
 
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="col-lg-5  form-group">
                                     <label>Note</label>
                                     <textarea class="form-control" name="note" placeholder="Write Here.." required=""></textarea>
                                 </div>
+                                <div class="col-lg-3 form-group">
+                                    <label>Days</label>
+
+                                    <input class="form-control" type="float" name="days" placeholder="days" required="">
+
+                                </div>
+                                <div class="col-lg-3 form-group">
+                                    <label>Total Price</label>
+
+                                    <input class="form-control" type="float" name="total" placeholder="total number" required="">
+
+                                </div>
                                 <div class="form-group">
-                                    <label >Status</label>
+                                    <label >Onaylıyormusunuz?</label>
                                     <select class="select2-single form-control" name="status" id="select2Single">
-                                        <option selected="selected" value="False">False</option>
-                                        <option value="True">True</option>
+                                        <option selected="selected" value="False">Evet</option>
+                                        <option value="True">Hayır</option>
 
                                     </select>
                                 </div>

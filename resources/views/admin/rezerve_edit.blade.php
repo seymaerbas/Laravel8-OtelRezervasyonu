@@ -14,74 +14,111 @@
 <link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700&amp;subset=latin-ext" rel="stylesheet">
 <!-- //Web-Fonts -->
 
-        <!-- Main content -->
-        <section class="content">
+<!-- Main content -->
+<section class="content">
 
-            <div class="card">
+    <div class="card">
 
-                    <h4 class="card-title">Review Detail</h4>
+        <h4 class="card-title">Rezerve Detail</h4>
 
-            </div>
+    </div>
 
-                    <div class="card-body">
+    <div class="card-body">
 
-                        <div class="card mb-4">
-
-
-                                <form role="form" action="{{ route('admin_review_update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
-                                    @csrf
-                                    <div class="card-body">
-
-                                        <table class="table table-striped">
+        <div class="card mb-4">
 
 
-                                            <tr>
-                                                <th>Id</th>  <td>{{ $data->id }}</td>
-                                            </tr>
+            <form role="form" action="{{ route('admin_rezerve_update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
+                @csrf
+                <div class="card-body">
 
-                                            </tr>
-                                            <th>Hotel</th>   <td>{{ $data->hotel->title }}</td>
-
-                                            </tr>
+                    <table class="table table-striped">
 
 
-                                            </tr>
+                        <tr>
+                            <th>Id</th>  <td>{{ $data->id }}</td>
+                        </tr>
 
-                                            <tr>
-                                                <th>Subject</th>   <td>{{ $data->subject }}</td>
-                                            </tr>
+                        <tr>
+                        <th>User</th>   <td>{{ $data->user->title }}</td>
 
-                                            <tr>
-                                                <th>Review</th>  <td>{{ $data->review }}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Review</th>   <td>{{ $data->rate}}</td>
-                                            </tr>
+                        </tr>
 
+                        <tr>
+                        <th>Hotel</th>   <td>{{ $data->hotel_id }}</td>
 
+                        </tr>
 
-                                            <tr>
-                                                <td></td>
-                                                <td>
-                                                    <div> <input type="submit" value="Update message" class="btn btn-primary"></div>
-                                                </td>
-                                            </tr>
+                        <tr>
+                        <th>Room</th>   <td>{{ $data->room->title}}</td>
 
-                                        </table>
+                        </tr>
+                        <tr>
+                        <th>Name</th>   <td>{{ $data->name}}</td>
+
+                        </tr>
+
+                        <tr>
+                        <th>Total</th>   <td>{{ $data->total }}</td>
+
+                        </tr>
+
+                        <tr>
+                        <th>checkin</th>   <td>{{ $data->checkin }}</td>
+
+                        </tr>
+
+                        </tr>
+                        <th>checkout</th>   <td>{{ $data->checkout }}</td>
+
+                        </tr>
+
+                        <tr>
+                        <th>days</th>   <td>{{ $data->days }}</td>
+
+                        </tr>
+
+                        <tr>
+                        <th>note</th>   <td>{{ $data->note }}</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <div class="form-group">
+                                <label >Action</label>
+                                <select class="select2-single form-control" name="status" id="select2Single">
+                                    <option value="True">True</option>
+                                    <option  value="False">False</option>
+
+                                </select>
                             </div>
 
+                        <tr>
+
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div> <input type="submit" value="Update message" class="btn btn-primary"></div>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
 
 
 
 
-                                </form>
-                        </div>
 
-                    </div>
+            </form>
+        </div>
+
+    </div>
 
 
 
-        </section><!-- /.content -->
-    </div><!-- /.content-wrapper -->
+</section><!-- /.content -->
+</div><!-- /.content-wrapper -->
 
 

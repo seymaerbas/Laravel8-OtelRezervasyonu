@@ -159,6 +159,7 @@ class HomeController extends Controller
         $data->checkin = $request->input('checkin');
         $data->checkout = $request->input('checkout');
         $data->days = $request->input('days');
+        $data->adet = $request->input('adet');
         $data->note = $request->input('note');
         $data->IP = $_SERVER['REMOTE_ADDR'];
         $data->status = $request->input('status');

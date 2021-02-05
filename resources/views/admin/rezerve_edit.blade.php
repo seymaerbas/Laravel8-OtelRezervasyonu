@@ -19,7 +19,7 @@
 
             <div class="card">
 
-                    <h4 class="card-title">Rezerve Detail</h4>
+                    <h4 class="card-title">Review Detail</h4>
 
             </div>
 
@@ -28,7 +28,7 @@
                         <div class="card mb-4">
 
 
-                                <form role="form" action="{{ route('admin_rezerve_update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
+                                <form role="form" action="{{ route('admin_review_update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="card-body">
 
@@ -40,53 +40,24 @@
                                             </tr>
 
                                             </tr>
-                                            <th>User</th>   <td>{{ $data->user->title }}</td>
-
-                                            </tr>
-
-                                            </tr>
                                             <th>Hotel</th>   <td>{{ $data->hotel->title }}</td>
 
                                             </tr>
 
-                                            </tr>
-                                            <th>Room</th>   <td>{{ $data->room->title }}</td>
-
-                                            </tr>
-                                            </tr>
-                                            <th>Name</th>   <td>{{ $data->name}}</td>
 
                                             </tr>
 
-                                            </tr>
-                                            <th>Total</th>   <td>{{ $data->total }}</td>
-
-                                            </tr>
-
-                                            </tr>
-                                            <th>checkin</th>   <td>{{ $data->checkin }}</td>
-
+                                            <tr>
+                                                <th>Subject</th>   <td>{{ $data->subject }}</td>
                                             </tr>
 
+                                            <tr>
+                                                <th>Review</th>  <td>{{ $data->review }}</td>
                                             </tr>
-                                            <th>checkout</th>   <td>{{ $data->checkout }}</td>
-
-                                            </tr>
-
-                                            </tr>
-                                            <th>days</th>   <td>{{ $data->days }}</td>
-
+                                            <tr>
+                                                <th>Review</th>   <td>{{ $data->rate}}</td>
                                             </tr>
 
-                                            </tr>
-                                            <th>note</th>   <td>{{ $data->note }}</td>
-
-                                            </tr>
-
-                                            </tr>
-                                            <th>Action</th>   <td>{{ $data->status }}</td>
-
-                                            </tr>
 
 
                                             <tr>

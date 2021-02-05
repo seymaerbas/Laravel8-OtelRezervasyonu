@@ -61,7 +61,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="{{route('admin_rezerve')}}">
             <i class="fab fa-fw fa-wpforms"></i>
             <span>Rezervasyon</span>
         </a>

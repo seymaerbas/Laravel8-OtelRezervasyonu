@@ -8,6 +8,7 @@ use App\Models\Hotel;
 use App\Models\Image;
 use App\Models\Message;
 use App\Models\Review;
+use App\Models\Rezerve;
 use App\Models\Room;
 use App\Models\Setting;
 use Illuminate\Http\Request;
@@ -117,7 +118,11 @@ class HomeController extends Controller
         $setting = Review::first();
         return view('home.review', ['setting' => $setting]);
     }
-
+    public function rezerve($id)
+    {
+        $room = Room::find($id);
+        return view('home.rezerve', ['room' => $room]);
+    }
     public function contact()
     {
         $setting = Setting::first();
@@ -135,11 +140,33 @@ class HomeController extends Controller
         $data->IP = $_SERVER['REMOTE_ADDR'];
         $data->rate = $request->input('rate');
 
+        $data->save();
+
+        return redirect()->route('hotel',['id'=>$hotel->id,'slug'=>$hotel->slug])->with('success','Yourumunuz kaydedilmiştir');
+    }
+    public function sendrezerve(Request $request,$id)
+    {
+        $data = new Rezerve;
+        $data->room_id =$id;
+        $data->user_id = Auth::id();
+        $data->hotel_id = $id;
+
+
+        $data->name = $request->input('name');
+        $data->surname = $request->input('surname');
+        $data->email = $request->input('email');
+        $data->phone = $request->input('phone');
+        $data->checkin = $request->input('checkin');
+        $data->checkout = $request->input('checkout');
+        $data->days = $request->input('days');
+        $data->note = $request->input('note');
+        $data->IP = $_SERVER['REMOTE_ADDR'];
+        $data->status = $request->input('status');
 
 
         $data->save();
 
-        return redirect()->route('hotel',['id'=>$hotel->id,'slug'=>$hotel->slug])->with('success','Yourumunuz kaydedilmiştir');
+        return redirect()->route('home');
     }
 
     public function sendmessage(Request $request)

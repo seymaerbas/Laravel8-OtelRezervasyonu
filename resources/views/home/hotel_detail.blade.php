@@ -177,7 +177,6 @@
                         <tr>
                             <th>Title</th>
                             <th>image</th>
-                            <th>Kişi</th>
                             <th>Fiyat</th>
                             <th>Rezervasyon Yap</th>
 
@@ -194,10 +193,11 @@
                                         </a>
                                 </td>
 
-                                <td><br><input type="number" style="width: 50px;" value="adet" name="adet" id="adet"/></td>
                                 <td><br>{{$rs->price}} ₺</td>
-                                <td><a href="#" class="btn button-style-3 mt-sm-2 mt-1">Book Now</a></td>
-
+                                <form action="{{route('rezerve',['id' => $rs->id])}}" method="post">
+                                    @csrf
+                                <td><button type="submit" class="btn button-style-3 mt-sm-2 mt-1">Book Now</button></td>
+                                </form>
                             </tr>
                         @endforeach
                         </tbody>

@@ -86,7 +86,7 @@
                                 </li>
                                 <li>
 
-                                    <a href="" class="dropdown-item" >
+                                    <a href="{{route('user_rezerve')}}" class="dropdown-item" >
                                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                         My rezervation
                                     </a>

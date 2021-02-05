@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RezerveController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route ;
 
@@ -34,7 +35,8 @@ Route::post('/gethotel', [HomeController::class, 'gethotel'])->name('gethotel');
 Route::get('/hotellist/{search}', [HomeController::class, 'hotellist'])->name('hotellist');
 Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
 Route::post('/sendreview/{id}/{slug}', [HomeController::class, 'sendreview'])->name('sendreview');
-
+Route::post('/sendrezerve/{id}', [HomeController::class, 'sendrezerve'])->name('sendrezerve');
+Route::post('/rezerve/{id}', [HomeController::class, 'rezerve'])->name('rezerve');
 
 
 Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('id')->whereAlpha('name')->name('test');
@@ -95,6 +97,15 @@ Route::prefix('hotel')->group(function (){
         Route::get('delete/{id}',[ReviewController::class,'destroy'])->name('admin_review_delete');
         Route::post('show',[ReviewController::class,'show'])->name('admin_review_show');
          });
+    //rezerve
+    Route::prefix('rezerves')->group(function (){
+
+        Route::get('/',[\App\Http\Controllers\Admin\RezerveController::class,'index'])->name('admin_rezerve');
+        Route::get('edit/{id}',[\App\Http\Controllers\Admin\RezerveController::class,'edit'])->name('admin_rezerve_edit');
+        Route::post('update/{id}',[\App\Http\Controllers\Admin\RezerveController::class,'update'])->name('admin_rezerve_update');
+        Route::get('delete/{id}',[\App\Http\Controllers\Admin\RezerveController::class,'destroy'])->name('admin_rezerve_delete');
+        Route::post('show',[\App\Http\Controllers\Admin\RezerveController::class,'show'])->name('admin_rezerve_show');
+    });
 //Hotel image gallery
     Route::prefix('image')->group(function (){
 
@@ -131,13 +142,21 @@ Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(fu
 Route::middleware('auth')->prefix('user')->namespace('user')->group(function () {
 
     Route::get('/profile',[UserController::class,'index'])->name('profile');
-
+//review
     Route::prefix('review')->group(function (){
 
         Route::get('/',[\App\Http\Controllers\ReviewController::class,'index'])->name('user_review');
         Route::post('update/{id}',[\App\Http\Controllers\ReviewController::class,'update'])->name('user_review_update');
         Route::get('delete/{id}',[\App\Http\Controllers\ReviewController::class,'destroy'])->name('user_review_delete');
         Route::get('show/{id}',[\App\Http\Controllers\ReviewController::class,'show'])->name('user_review_show');
+
+    });
+    Route::prefix('rezerve')->group(function (){
+
+        Route::get('/',[RezerveController::class,'index'])->name('user_rezerve');
+        Route::post('update/{id}',[RezerveController::class,'update'])->name('user_rezerve_update');
+        Route::get('delete/{id}',[RezerveController::class,'destroy'])->name('user_rezerve_delete');
+        Route::get('show/{id}',[RezerveController::class,'show'])->name('user_rezerve_show');
 
     });
 

@@ -23,4 +23,8 @@ class Hotel extends Model
     {
         return $this->hasMany(Review::class);
     }
+    public function rezerves()
+    {
+        return $this->hasMany(Rezerve::class);
+    }
 }

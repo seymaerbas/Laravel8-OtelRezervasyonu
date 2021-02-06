@@ -54,7 +54,7 @@
 
                         </tr>
                         <tr>
-                        <th>Name</th>   <td>{{ $data->name}}</td>
+                        <th>Name</th>   <td>{{ $data->user->name}}</td>
 
                         </tr>
 

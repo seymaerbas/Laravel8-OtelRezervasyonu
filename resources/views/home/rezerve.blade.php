@@ -48,10 +48,6 @@
                                         <label>First Name</label>
                                         <input class="form-control" type="text" name="name"  placeholder="Type Here.." required="">
                                     </div>
-                                    <div class="col-lg-6 form-group">
-                                        <label>Last Name</label>
-                                        <input class="form-control" type="text" name="surname" placeholder="Type Here.." required="">
-                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6 form-group">
@@ -92,13 +88,13 @@
                                 <div class="col-lg-3 form-group">
                                     <label>Days</label>
 
-                                    <input class="form-control" type="float" name="days" placeholder="days" required="">
+                                    <input class="form-control" type="number" name="days" placeholder="days" required="">
 
                                 </div>
                                 <div class="col-lg-3 form-group">
                                     <label>Total Price</label>
 
-                                    <input class="form-control" type="float" name="total" placeholder="total number" required="">
+                                    <input class="form-control" type="number" name="total" placeholder="total number" required="">
 
                                 </div>
                                 <div class="form-group">

@@ -31,6 +31,7 @@
                                     <h1 class="h4 text-gray-900 mb-4">Login</h1>
                                 </div>
                                 <div class="user">
+                                    @include('home.message')
                                     <form action="{{route('admin_logincheck')}}" method="post">
                                         @csrf
 

@@ -71,6 +71,7 @@
                                         <label>İmage</label>
                                         <input type="file" name="image" class="form-control" >
                                     </div>
+
                                     <div class="form-group">
                                         <label >Status</label>
                                     <select class="select2-single form-control" name="status" id="select2Single">

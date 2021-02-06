@@ -47,7 +47,7 @@
                                             <th>Hotel</th>
                                             <th>Room</th>
                                             <th>Name</th>
-                                            <th>Surname</th>
+                                            <th>Email</th>
                                             <th>Phone</th>
                                             <th>Total</th>
                                             <th>Checkin</th>
@@ -72,9 +72,9 @@
                                                 <td>{{ $rs->user_id }}</td>
                                                 <td>{{ $rs->hotel_id }}</td>
                                                 <td>{{ $rs->room->title }}</td>
-                                                <td>{{ $rs->name }}</td>
-                                                <td>{{ $rs->surname }}</td>
-                                                <td>{{ $rs->phone }}</td>
+                                                <td>{{ $rs->user->name }}</td>
+                                                <td>{{ $rs->user->email }}</td>
+                                                <td>{{ $rs->user->phone }}</td>
                                                 <td>{{ $rs->total }}</td>
                                                 <td>{{ $rs->checkin}}</td>
                                                 <td>{{ $rs->checkout}}</td>

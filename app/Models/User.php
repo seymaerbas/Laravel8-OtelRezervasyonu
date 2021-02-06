@@ -64,4 +64,8 @@ class User extends Authenticatable
     public function rezerve(){
         return $this->hasMany(rezerve::class);
     }
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
 }

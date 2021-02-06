@@ -43,6 +43,7 @@ Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('i
 
 //Admin
 Route::middleware('auth')->prefix('admin')->group(function () {
+    Route::middleware('admin')->group(function() {
 
     Route::get('/', [\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin_home');
 
@@ -130,7 +131,7 @@ Route::prefix('hotel')->group(function (){
         Route::get('show', [FaqController::class, 'show'])->name('admin_faq_show');
 
     });
-
+    });
 });
 Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function () {
 

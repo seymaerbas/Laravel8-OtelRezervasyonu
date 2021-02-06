@@ -57,6 +57,8 @@
                                     <a class="dropdown-item" href="{{route('profile')}}"> <img class="img-profile rounded-circle" src="{{asset('assets')}}/admin/img/seyma.png" style="max-width: 60px">
 
                                         {{Auth::user()->name }}
+                                        <br>
+                                        {{Auth::user()->roles->pluck('name') }}
                                     </a>
                                     @endauth
                                 </li>

@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="273f4194-f990-4127-b0e7-5b99eb46224c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e340aee7-3d2f-4164-8a8e-66244a98ffc4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e340aee7-3d2f-4164-8a8e-66244a98ffc4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/review_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/review_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/rezerve.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/rezerve.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/rezerve_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/rezerve_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/category_hotels.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/category_hotels.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/room_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/room_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/rezerve.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/rezerve.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/user_rezerve.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_rezerve.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +248,7 @@
       <workItem from="1612256213834" duration="22798000" />
       <workItem from="1612349707310" duration="29392000" />
       <workItem from="1612428602273" duration="37138000" />
-      <workItem from="1612513911404" duration="15012000" />
+      <workItem from="1612513911404" duration="28379000" />
     </task>
     <task id="LOCAL-00001" summary="Index Changed">
       <created>1607894118647</created>
@@ -440,14 +446,20 @@
       <option name="project" value="LOCAL" />
       <updated>1612484572242</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="admin panelde rezervasyon sayfası oluşturuldu">
+      <created>1612553323454</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1612553323454</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Route tanımlandı.&#10;Login,Logincheck Fonksiyonu oluşturuldu.&#10;login.blade.php sayfası oluşturuldu." />
     <MESSAGE value="Login ve Logout işlemleri yapıldı.&#10;web.php, _sidebar.blade.php, login.blade.php düzenlendi." />
     <MESSAGE value="CategoryController.php oluşturuldu." />
     <MESSAGE value="_sidebar.blade.php düzenlendi" />
@@ -472,6 +484,7 @@
     <MESSAGE value="ürün yorumları eklendi ve yönetimi sağlandı" />
     <MESSAGE value="Sıkça sorunlan sorular sayfası oluşturuldu, homeda görülmesi sağlandı." />
     <MESSAGE value="düzeltmeler yapıldı. Rezervasyon formu oluşturuldu." />
-    <option name="LAST_COMMIT_MESSAGE" value="düzeltmeler yapıldı. Rezervasyon formu oluşturuldu." />
+    <MESSAGE value="admin panelde rezervasyon sayfası oluşturuldu" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin panelde rezervasyon sayfası oluşturuldu" />
   </component>
 </project>

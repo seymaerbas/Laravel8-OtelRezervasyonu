@@ -38,7 +38,10 @@
                         <tr>
                             <th>Id</th>  <td>{{ $data->id }}</td>
                         </tr>
-
+                        <tr>
+                            <th>Name</th>
+                           <td>{{ $data->user->name }}</td>
+                        </tr>
                         <tr>
                         <th>Hotel</th>   <td>{{ $data->hotel->title}}</td>
 

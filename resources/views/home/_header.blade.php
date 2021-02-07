@@ -58,7 +58,6 @@
 
                                         {{Auth::user()->name }}
                                         <br>
-                                        {{Auth::user()->roles->pluck('name') }}
                                     </a>
                                     @endauth
                                 </li>

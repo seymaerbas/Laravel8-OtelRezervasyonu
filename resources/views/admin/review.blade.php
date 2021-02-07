@@ -32,7 +32,7 @@
                             <thead class="thead-light">
                             <tr>
                                 <th>Id</th>
-                                <th>User Id</th>
+                                <th>Name</th>
                                 <th>Hotel Id</th>
                                 <th>Subject</th>
                                 <th>Review</th>
@@ -47,7 +47,9 @@
                             @foreach($datalist as $rs )
                             <tr>
                                 <td>{{ $rs->id }}</td>
-                                <td>{{ $rs->user_id }}</td>
+                                <td>
+                                <a href="{{route('admin_user_show',['id' => $rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')"> {{ $rs->user->name }} </a>
+                                </td>
                                 <td>{{ $rs->hotel->title }}</td>
                                 <td>{{ $rs->subject }}</td>
                                 <td>{{ $rs->review }}</td>

@@ -66,6 +66,12 @@
             <span>Rezervasyon</span>
         </a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('admin_users')}}">
+            <i class="fab fa-fw fa-wpforms"></i>
+            <span>Users</span>
+        </a>
+    </li>
 
 
     <li class="nav-item">

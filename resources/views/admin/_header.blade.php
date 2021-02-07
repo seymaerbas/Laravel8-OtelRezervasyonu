@@ -84,8 +84,10 @@
                 </h6>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                     <div class="dropdown-list-image mr-3">
-                        <img class="rounded-circle" src="{{asset('assets')}}/admin/img/man.png" style="max-width: 60px" alt="">
-                        <div class="status-indicator bg-success"></div>
+                        @if(Auth::user()->profile_photo_path)
+                        <img src="{{Storage::url(Auth::user()->profile_photo_path)}}" class="rounded-circle">
+                        @endif
+                            <div class="status-indicator bg-success"></div>
                     </div>
                     <div class="font-weight-bold">
                         <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been

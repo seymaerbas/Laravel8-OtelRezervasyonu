@@ -21,7 +21,15 @@ class HomeController extends Controller
     {
         return Category::where('parent_id', '=', 0)->with('children')->get();
     }
+    public static function dateDifference($checkin, $checkout)
+    {
+        // calulating the difference in timestamps
+        $days = strtotime($checkin) - strtotime($checkout);
 
+        // 1 day = 24 hours
+        // 24 * 60 * 60 = 86400 seconds
+        return ceil(abs($days / 86400));
+    }
     public static function getsetting()
     {
         return Setting::first();
@@ -121,7 +129,8 @@ class HomeController extends Controller
     public function rezerve($id)
     {
         $room = Room::find($id);
-        return view('home.rezerve', ['room' => $room]);
+        $data=Rezerve::where('room_id',$id)->get();
+        return view('home.rezerve', ['room' => $room,'data'=>$data]);
     }
     public function contact()
     {
@@ -151,7 +160,6 @@ class HomeController extends Controller
         $data->user_id = Auth::id();
         $data->hotel_id = $id;
 
-
         $data->name = $request->input('name');
         $data->surname = $request->input('surname');
         $data->email = $request->input('email');
@@ -159,15 +167,12 @@ class HomeController extends Controller
         $data->checkin = $request->input('checkin');
         $data->checkout = $request->input('checkout');
         $data->days = $request->input('days');
-        $data->adet = $request->input('adet');
         $data->note = $request->input('note');
         $data->IP = $_SERVER['REMOTE_ADDR'];
-        $data->status = $request->input('status');
-
 
         $data->save();
 
-        return redirect()->route('home');
+        return redirect()->route('user_rezerve');
     }
 
     public function sendmessage(Request $request)

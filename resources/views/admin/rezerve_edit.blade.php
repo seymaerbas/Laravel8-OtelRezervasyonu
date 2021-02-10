@@ -33,6 +33,10 @@
                 <div class="card-body">
 
                     <table class="table table-striped">
+                        @php
+                            $data->total=$data->days*$data->room->price;
+                        @endphp
+
 
 
                         <tr>

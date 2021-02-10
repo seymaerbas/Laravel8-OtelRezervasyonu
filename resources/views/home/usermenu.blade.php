@@ -10,7 +10,7 @@
             $userRoles=Auth::User()->roles->pluck('name');
         @endphp
         @if($userRoles->contains('admin'))
-            <li class="nav-item"><a href="{{route('admin_home')}}" class="nav-link"  target="_blank"><i class="fa fa-heart"></i> ADMIN PANEL</a></li>
+            <li class="nav-item"><a href="{{route('admin_home')}}" class="nav-link"  target="_blank"><i class="fa fa-map-signs"></i> ADMIN PANEL</a></li>
         @endif
     </ul>
 </div>

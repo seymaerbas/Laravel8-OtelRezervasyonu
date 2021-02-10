@@ -40,7 +40,6 @@
                                 <th>Checkin</th>
                                 <th>Checkout</th>
                                 <th>Days</th>
-                                <th>Kişi Sayısı</th>
                                 <th>Note</th>
                                 <th>Action</th>
                                 <th>Edit</th>
@@ -52,20 +51,19 @@
 
                             @foreach($datalist as $rs )
                                 @php
-                                    $total=0;
-                                    $total=$rs->room->price*$rs->adet;
+                                    $rs->total=$rs->days*$rs->room->price;
                                 @endphp
-                            <tr>
+
+                                <tr>
                                 <td>{{ $rs->id }}</td>
                                 <td>{{ $rs->user_name }}</td>
                                 <td>{{ $rs->hotel_id}}</td>
                                 <td>{{ $rs->room->title }}</td>
                                 <td>{{ $rs->name }}</td>
-                                <td>{{ $rs->total }}</td>
+                                <td>{{ $rs->total }}₺</td>
                                 <td>{{ $rs->checkin}}</td>
                                 <td>{{ $rs->checkout}}</td>
                                 <td>{{ $rs->days}}</td>
-                                <td>{{ $rs->adet}}</td>
                                 <td>{{ $rs->note}}</td>
                                 <td>{{ $rs->status }}</td>
 

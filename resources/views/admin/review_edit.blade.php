@@ -3,7 +3,7 @@
 <!-- Bootstrap-Core-CSS -->
 <link href="{{asset('assets')}}/css/css_slider.css" type="text/css" rel="stylesheet" media="all">
 <!-- banner slider -->
-<link rel="stylesheet" href="{{asset('assets')}}/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="{{asset('assets')}}/css/style.css" type="text/css" media="all"/>
 <!-- Style-CSS -->
 <link href="{{asset('assets')}}/css/font-awesome.min.css" rel="stylesheet">
 <!-- Font-Awesome-Icons-CSS -->
@@ -28,60 +28,62 @@
         <div class="card mb-4">
 
 
-            <form role="form" action="{{ route('admin_review_update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
+            <form role="form" action="{{ route('admin_review_update',['id'=>$data->id])}}" method="post"
+                  enctype="multipart/form-data">
                 @csrf
-                <div class="card-body">
-
-                    <table class="table table-striped">
-
-
-                        <tr>
-                            <th>Id</th>  <td>{{ $data->id }}</td>
-                        </tr>
-                        <tr>
-                            <th>Name</th>
-                           <td>{{ $data->user->name }}</td>
-                        </tr>
-                        <tr>
-                        <th>Hotel</th>   <td>{{ $data->hotel->title}}</td>
-
-                        </tr>
-
-
-
-                        <tr>
-                            <th>Subject</th>   <td>{{ $data->subject }}</td>
-                        </tr>
-
-                        <tr>
-                            <th>Review</th>  <td>{{ $data->review }}</td>
-                        </tr>
-                        <tr>
-                            <th>Rate</th>   <td>{{ $data->rate}}</td>
-                        </tr>
-                        <tr>
-                            <th>status</th>   <td>{{ $data->status}}</td>
-                        </tr>
-
-                        <tr>
-
-                            <td>
-                                <div> <input type="submit" value="Update message" class="btn btn-primary"></div>
-                            </td>
-                        </tr>
-
-                    </table>
-                </div>
 
 
 
 
 
+
+
+
+
+                    <div class="card-body">
+
+                        <div class="form-group">
+                            <label >Title</label>
+                            <input type="text" name="id" value="{{ $data->id}}" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <input type="text" name="userid" value="{{$data->user->name }}" class="form-control" >
+                        </div>
+
+                        <div class="form-group">
+                            <label>Rate</label>
+                            <input type="text" name="userid" value="{{$data->rate }}" class="form-control" >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label >Status</label>
+                            <select class="select2-single form-control" name="status" id="select2Single">
+
+                                <option value="True">True</option>
+                                <option  value="False">False</option>
+
+                            </select>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary">Düzenle</button>
+
+                    </div>
             </form>
+
+
+
+
+
         </div>
 
+
+        </form>
     </div>
 
+    </div>
 
 
 </section><!-- /.content -->

@@ -33,7 +33,7 @@
                             <thead class="thead-light">
                             <tr>
                                 <th><b>Id</b></th>
-                                <th><b></b></th>
+                                <th><b>image</b></th>
                                 <th><b>Name</b></th>
                                 <th><b>Email</b></th>
                                 <th><b>Phone</b></th>
@@ -51,6 +51,7 @@
                                         {{$rs->id}}
                                     </td>
                                     <td>
+
                                         @if($rs->profile_photo_path)
                                             <img src="{{Storage::url($rs->profile_photo_path)}}" height="50" style="border-radius: 10px">
                                         @endif

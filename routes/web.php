@@ -38,7 +38,6 @@ Route::post('/sendreview/{id}/{slug}', [HomeController::class, 'sendreview'])->n
 Route::post('/sendrezerve/{id}', [HomeController::class, 'sendrezerve'])->name('sendrezerve');
 Route::post('/rezerve/{id}', [HomeController::class, 'rezerve'])->name('rezerve');
 
-
 Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('id')->whereAlpha('name')->name('test');
 
 //Admin

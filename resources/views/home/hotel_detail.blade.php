@@ -194,6 +194,7 @@
                                 </td>
 
                                 <td><br>{{$rs->price}} ₺</td>
+
                                 <form action="{{route('rezerve',['id' => $rs->id])}}" method="post">
                                     @csrf
                                 <td><button type="submit" class="btn button-style-3 mt-sm-2 mt-1">Book Now</button></td>

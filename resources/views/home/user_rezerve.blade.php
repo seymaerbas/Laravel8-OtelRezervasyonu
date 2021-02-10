@@ -43,17 +43,13 @@
                                         <thead class="thead-light">
                                         <tr>
                                             <th>Id</th>
-                                            <th>User</th>
                                             <th>Hotel</th>
                                             <th>Room</th>
                                             <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Phone</th>
-                                            <th>Total</th>
                                             <th>Checkin</th>
                                             <th>Checkout</th>
+                                            <th>Total</th>
                                             <th>Days</th>
-                                            <th>Kişi Sayısı</th>
                                             <th>Note</th>
                                             <th>Action</th>
                                             <th>Delete</th>
@@ -62,24 +58,20 @@
 
                                         <tbody>
                                         @foreach($datalist as $rs )
+                                            @php
+                                                $rs->total=$rs->days*$rs->room->price;
+                                            @endphp
 
-                                                @php
-                                                    $total=0;
-                                                    $total=$rs->room->price*$rs->adet;
-                                                @endphp
+
                                             <tr>
                                                 <td>{{ $rs->id }}</td>
-                                                <td>{{ $rs->user_id }}</td>
                                                 <td>{{ $rs->hotel_id }}</td>
                                                 <td>{{ $rs->room->title }}</td>
                                                 <td>{{ $rs->user->name }}</td>
-                                                <td>{{ $rs->user->email }}</td>
-                                                <td>{{ $rs->user->phone }}</td>
-                                                <td>{{ $rs->total }}</td>
                                                 <td>{{ $rs->checkin}}</td>
                                                 <td>{{ $rs->checkout}}</td>
+                                                <td>{{ $rs->total }}₺</td>
                                                 <td>{{ $rs->days}}</td>
-                                                <td>{{ $rs->adet}}</td>
                                                 <td>{{ $rs->note}}</td>
                                                 <td>{{ $rs->status }}</td>
 
@@ -88,6 +80,7 @@
 
                                             </tr>
                                         </tbody>
+
                                         @endforeach
                                     </table>
                                 </div>
@@ -99,3 +92,6 @@
     </div>
 
 @endsection
+
+
+
